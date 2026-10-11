@@ -1,0 +1,42 @@
+{
+  "name": "venture-city",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3000",
+    "build": "next build",
+    "start": "next start -p 3000",
+    "lint": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "migrate": "tsx scripts/migrate.ts",
+    "seed": "tsx scripts/seed.ts",
+    "assign-missions": "tsx scripts/assign-missions.ts",
+    "load-test": "tsx scripts/load-test.ts",
+    "backup-drill": "tsx scripts/backup-restore.ts",
+    "setup": "tsx scripts/setup.ts",
+    "check": "npm run lint && npm run test"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "jose": "^5.9.6",
+    "lucide-react": "^0.468.0",
+    "next": "^15.1.0",
+    "pg": "^8.13.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tailwind-merge": "^2.5.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.1",
+    "@types/pg": "^8.11.10",
+    "@types/react": "^19.0.1",
+    "@types/react-dom": "^19.0.1",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.16",
+    "tsx": "^4.23.15",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  }
+}

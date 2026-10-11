@@ -1,0 +1,2851 @@
+[
+  {
+    "id": "comp_swiftcart",
+    "code": "SWC",
+    "name": "SwiftCart",
+    "sector": "Quick commerce and delivery",
+    "tagline": "A small margin on each basket plus a delivery fee; you also sell spare van runs to other companies.",
+    "description": "Started as two friends delivering groceries by scooter. Grew to six dark stores by promising 30 minutes and never pricing for it. Make 30-minute delivery the city's default, for households and for any business shipping to a home.",
+    "cluster": "Physical",
+    "workforce_mix": "Ops-led",
+    "fills_slots": [
+      "S1",
+      "S2"
+    ],
+    "critical_slot": "S1 Fleet capacity",
+    "ceo_persona": "Growth Maximiser",
+    "deficit_domain": "Finance / Capital",
+    "hidden_lever": "Cost lever: an S1 deal drops Logistics from Very High to High",
+    "vulnerability": "Concentration: anchor leaves if capacity/Logistics depletes",
+    "consumption": {
+      "compute": "Low",
+      "energy": "Medium",
+      "logistics": "Very High",
+      "materials": "Medium",
+      "data": "Medium",
+      "infrastructure": "High"
+    },
+    "initial_cash": 30050,
+    "scarcest_resources": "Logistics, which runs out during Tick 7 if you buy none",
+    "deadlines": "Tick 4: 7,000 VB due to your cold-room builder, and your cheap Infrastructure deal ends. After Tick 6: your anchor customer comes up for renewal",
+    "cannot_do_alone": "Vans and drivers: your own fleet cannot keep up with your own promise",
+    "gate_licence": "The cold-chain delivery permit, from Government",
+    "notable_asset": "Six dark stores, book value 6,000 VB (they count as Bank collateral)",
+    "at_a_glance": "You run the busiest operation in Venture City and the thinnest margin in it. SwiftCart owns the only ready consumer delivery channel in town: six dark stores, a van fleet, and a promise of anything a kitchen needs within 30 minutes. Everyone wants what you have. Almost nobody has asked what it costs you to do it.",
+    "founder_letter": "Team,\n\nWhen we started SwiftCart it was two of us, two scooters and a list of forty phone numbers. We promised thirty minutes because it sounded brave. Then we kept the promise, and people loved us for it, and we never once stopped to price it.\n\nSix dark stores later, every new neighbourhood has added orders and cost in equal measure. The vans are full at the dinner rush and idle at three in the afternoon. We still owe the builder for the cold rooms. And the person who kept the numbers left, and we never replaced them.\n\nYou are not inheriting a failing company. You are inheriting a loved one that has never been run like a business. Don't be late. Our customers remember.\n\nThe founders",
+    "products_table": [
+      [
+        "",
+        "30-minute basket batch",
+        "Van run"
+      ],
+      [
+        "Buyer gets",
+        "A batch of grocery baskets delivered to a household customer within the tick",
+        "Delivery of up to 5 of the buyer's products to its customers' homes within the tick, or 5 units of van capacity"
+      ],
+      [
+        "Uses per unit",
+        "1 Logistics, 1 Materials",
+        "1 Logistics, 1 Energy"
+      ],
+      [
+        "Up to, per tick",
+        "5",
+        "3"
+      ],
+      [
+        "List / lowest price (VB)",
+        "650 / 500",
+        "85 / 70"
+      ],
+      [
+        "Sold to",
+        "Household customer cards",
+        "Other companies and institution customers"
+      ],
+      [
+        "Licence",
+        "Chilled baskets need the cold-chain permit",
+        "The chilled van run (120 / 95) needs the cold-chain permit"
+      ]
+    ],
+    "obligations_table": [
+      [
+        "Obligation",
+        "Terms"
+      ],
+      [
+        "Anchor customer",
+        "Hillcrest Households: 2 basket batches every tick at 650 VB each, Ticks 1 to 6 (7,800 VB). Then up for renewal at the Customer desk."
+      ],
+      [
+        "Supplier deal",
+        "Civic Build Supplies: Infrastructure at 25.5 VB a unit (15% below normal), up to 12 a tick. Ends at Tick 4 unless you commit to 3 ticks at 12 units."
+      ],
+      [
+        "Bill",
+        "7,000 VB to Civic Build Supplies for the cold rooms, due Tick 4. If unpaid, they stop supplying you."
+      ],
+      [
+        "Your memorandum",
+        "With Voltway, the city's fleet operator: \"Peak-hour vans and drivers for grocery runs, from Tick 1.\" A recorded need, not a contract."
+      ],
+      [
+        "A memorandum you hold",
+        "From Mango & Co., a consumer brand: \"Last-mile delivery of our product units to customers' homes.\" Their need, not a contract."
+      ]
+    ],
+    "leads_table": [
+      [
+        "Lead",
+        "What you know"
+      ],
+      [
+        "Riverside Pharmacy Group",
+        "A big customer at the Customer desk that needs chilled medicines delivered every tick. It will not sign without the cold-chain permit."
+      ],
+      [
+        "A health business",
+        "Needs medicines carried to patients' homes within the hour. Find out who."
+      ],
+      [
+        "A grower network",
+        "Has more produce than buyers. You have the only consumer channel in the city."
+      ]
+    ],
+    "dependencies_table": [
+      [
+        "You need",
+        "Who might supply it",
+        "If nobody does"
+      ],
+      [
+        "Vans and drivers (critical)",
+        "Voltway, your memorandum partner, and maybe others",
+        "The Logistics Provider: standard delivery next tick, or immediate at 1.5 times the price"
+      ],
+      [
+        "Raw materials and produce",
+        "A grower network, if one is in the city",
+        "The Supplier Market"
+      ],
+      [
+        "Payments",
+        "A payments company",
+        "The Bank's merchant service, 3% of your receipts"
+      ],
+      [
+        "Analytics",
+        "An analytics company",
+        "A specialist from the Talent Exchange"
+      ]
+    ],
+    "objectives_table": [
+      [
+        "Layer",
+        "Target"
+      ],
+      [
+        "Survive",
+        "Never Distressed two ticks running; solvent at the freeze"
+      ],
+      [
+        "Revenue",
+        "18,000 VB of new revenue by the freeze, not counting the anchor's first six ticks"
+      ],
+      [
+        "Grow",
+        "Hold the cold-chain permit and deliver to at least one pharmacy customer"
+      ],
+      [
+        "Public objective",
+        "Run per-tick delivery contracts with 3 other companies, and renew the anchor at or above today's rate"
+      ]
+    ],
+    "intel_facts_table": [
+      [
+        "",
+        ""
+      ],
+      [
+        "Inside fact",
+        "\"Our dark stores turn stock over every two ticks; one could be fitted for chilled medicine if we held the permit.\""
+      ],
+      [
+        "Market fact",
+        "\"The city's fleet operator has vans standing idle half of every day and wants steady buyers.\""
+      ],
+      [
+        "Rumour",
+        "\"The Bank is tightening credit for delivery businesses after a bad quarter.\""
+      ],
+      [
+        "Overheard",
+        "\"Our anchor's buyer mentioned their last delivery partner was dropped after two late weeks.\""
+      ]
+    ],
+    "dossier_filename": "01 - SwiftCart - Founder Dossier.docx",
+    "dossier_url": "/dossiers/01 - SwiftCart - Founder Dossier.docx",
+    "dossier_slug_url": "/dossiers/comp_swiftcart.docx",
+    "all_paragraphs": [
+      "VENTURE CITY \u00b7 FOUNDER DOSSIER",
+      "SwiftCart",
+      "Saturday 10 October 2026 \u00b7 For every founder and member of staff of SwiftCart",
+      "What your company knows at City Opens. New messages arrive in your company inbox during the day. Your live numbers are on the Company Station: if this dossier and the Station disagree, the Station is right.",
+      "At a glance",
+      "You run the busiest operation in Venture City and the thinnest margin in it. SwiftCart owns the only ready consumer delivery channel in town: six dark stores, a van fleet, and a promise of anything a kitchen needs within 30 minutes. Everyone wants what you have. Almost nobody has asked what it costs you to do it.",
+      "A letter from the founders",
+      "Team,",
+      "When we started SwiftCart it was two of us, two scooters and a list of forty phone numbers. We promised thirty minutes because it sounded brave. Then we kept the promise, and people loved us for it, and we never once stopped to price it.",
+      "Six dark stores later, every new neighbourhood has added orders and cost in equal measure. The vans are full at the dinner rush and idle at three in the afternoon. We still owe the builder for the cold rooms. And the person who kept the numbers left, and we never replaced them.",
+      "You are not inheriting a failing company. You are inheriting a loved one that has never been run like a business. Don't be late. Our customers remember.",
+      "The founders",
+      "Who you are",
+      "Your team",
+      "Your CEO is a volunteer playing the Growth Maximiser: customers first, profit later; won't cut acquisition spend; tends to overspend on growth.",
+      "Your staff are strong in Operations. You are one person short in Finance / Capital: nobody models what each delivery really costs. That empty seat costs 225 VB every tick until it is filled. Everyone starts at Level 0 on 100 VB per tick.",
+      "Before Market Open, elect two Authorised Signatories. Either can approve spending up to 5,000 VB; above that needs the CEO or both together. Pick people who will be around at Tick 4.",
+      "Capital and resources",
+      "Figures assume a 9-person company; the platform sets your real numbers when registration closes. Your Company Station (the CEO volunteer's tablet) shows your live cash, stock, contracts, deadlines and people. Your Participant Portal (scan the QR on your badge) holds your wallet, offers and the deals you propose. There is no physical money: the platform is the record.",
+      "Products",
+      "What you start with: obligations",
+      "Customers and leads",
+      "Hillcrest Households is your only steady income, and it remembers that you were late two weeks running last month.",
+      "Open customer cards sit at the Customer desk. Ask what each customer must have, and listen for what they need but did not write down.",
+      "Who you need, and who needs you",
+      "Others need you for home delivery (a consumer brand and a health business) and, sometimes, van capacity. Your rival is also your supplier: the fleet operator sells what you sell, and you need to buy from it.",
+      "Immediate challenges",
+      "Bottleneck: Logistics. Every basket and every van run you sell uses one more unit.",
+      "Weakness: nobody models unit economics.",
+      "Known risks: the Tick 4 bill and the end of your Infrastructure deal land together; your anchor renewal after Tick 6.",
+      "Objectives",
+      "Your CEO also holds a private objective in a sealed envelope, and each of you has a personal objective in your Portal.",
+      "Options on the table",
+      "Obvious: renew the anchor on better terms; sell van runs to companies that need home delivery or vans.",
+      "Worth finding: the pharmacy needs chilled delivery, which the permit opens; the fleet operator's idle vans could make your vans cheap.",
+      "Bigger moves: become the city's delivery service for everyone; add chilled medicine delivery; buy a produce supplier or a consumer brand; merge fleets with the fleet operator.",
+      "What only you know",
+      "None of these is marked true or false. You may share, sell or trade them. Some people on your team may hold a sealed note the rest have not seen. Ask.",
+      "Rules that matter most",
+      "A company is Distressed if its cash is below zero after a tick, it misses a loan payment, it has fewer than 3 staff, or a High or Very High resource sits at 0 for 2 ticks. You then have 2 ticks to fix it.",
+      "Stock: a warning at 30 units; at 15, anything using that resource costs 25% more of it; at 0, deliveries stop.",
+      "Anyone may negotiate. A deal proposed in the Portal is real only when a signatory or the CEO accepts it.",
+      "Desks enter your purchases, loans, contracts and licences on the platform; check the Station afterwards.",
+      "Nothing settles before Tick 1. No outside internet or AI until the Internet Unlock at Tick 8.",
+      "Stuck on the platform? The helpdesk is open all day."
+    ]
+  },
+  {
+    "id": "comp_ledgerly",
+    "code": "LED",
+    "name": "Ledgerly",
+    "sector": "Small-business payments (fintech)",
+    "tagline": "A fee for each tick of payment processing; interest on short merchant advances once licensed; sales of anonymised transaction datasets.",
+    "description": "Built by two former bank engineers who thought small merchants were badly served. The rails work; the sales team never got hired, so growth came only from word of mouth. Every small business in the city takes payments and gets credit on fair terms.",
+    "cluster": "Digital, Regulated",
+    "workforce_mix": "Tech-led",
+    "fills_slots": [
+      "S7",
+      "S11"
+    ],
+    "critical_slot": "S8 Security",
+    "ceo_persona": "Dealmaker",
+    "deficit_domain": "Growth / Sales",
+    "hidden_lever": "Network effect: each partner company on its rails adds revenue per tick",
+    "vulnerability": "Hidden liability: fraud losses on processing without S8",
+    "consumption": {
+      "compute": "High",
+      "energy": "Low",
+      "logistics": "Low",
+      "materials": "Low",
+      "data": "Very High",
+      "infrastructure": "High"
+    },
+    "initial_cash": 32050,
+    "scarcest_resources": "Data, which runs out during Tick 7 if you buy none",
+    "deadlines": "Tick 4: your cheap Data deal ends. After Tick 6: your anchor customer comes up for renewal. Every tick: a missed processing tick costs 1,000 VB in chargebacks",
+    "cannot_do_alone": "Security and compliance: your rails are only as trusted as the audit behind them, and you do not own one",
+    "gate_licence": "The payments licence, from Government. It lets you lend to merchants",
+    "notable_asset": "Merchant transaction history dataset, book value 5,000 VB (it counts as Bank collateral)",
+    "at_a_glance": "You run the payment rails half the city could be using, and almost nobody knows your name. Ledgerly moves money for merchants, sees cash flowing through the city before anyone else does, and has a product that works. What it lacks is a salesperson, a payments licence, and the security cover to grow without worrying what the next merchant brings.",
+    "founder_letter": "Team,\n\nWe left the bank because we watched small shops lose sales for want of a card machine they could afford. We built the rails in a spare room, and they worked the first time.\n\nThen we made the mistake engineers make. We assumed that if we built something good, people would find it. Every merchant we have came because another merchant told them about us. We never hired anyone to knock on doors, so we never knocked.\n\nYou inherit rails that work, merchants who trust us, and a promise that one day we would lend to the people the Bank turns away. Be careful who you let onto the rails, and careful what you promise.\n\nSign people. Stay safe. Get the licence.\n\nThe founders",
+    "products_table": [
+      [
+        "",
+        "Payment processing",
+        "Verified transaction dataset"
+      ],
+      [
+        "Buyer gets",
+        "One tick of processing for its customer receipts, for up to 4 companies or one large merchant network per block; meets any customer card that asks for digital payments",
+        "5 Data units of verified quality"
+      ],
+      [
+        "Uses per unit",
+        "1 Compute, 1 Data",
+        "1 Compute, 2 Data"
+      ],
+      [
+        "Up to, per tick",
+        "4 blocks",
+        "2"
+      ],
+      [
+        "List / lowest price",
+        "2.5% / 1.5% of the receipts processed",
+        "100 / 85 VB"
+      ],
+      [
+        "Sold to",
+        "Other companies; business and household merchant cards",
+        "Other companies; business customer cards"
+      ],
+      [
+        "Licence",
+        "None",
+        "None"
+      ]
+    ],
+    "obligations_table": [
+      [
+        "Obligation",
+        "Terms"
+      ],
+      [
+        "Anchor customer",
+        "Metro Retail Federation: 2 processing blocks every tick at 500 VB each, Ticks 1 to 6 (6,000 VB). Then up for renewal at the Customer desk."
+      ],
+      [
+        "Supplier deal",
+        "OpenData Exchange: Data at 22 VB a unit (12% below normal), up to 12 a tick. Ends at Tick 4 unless you commit to 3 ticks at 12 units."
+      ],
+      [
+        "Chargebacks",
+        "1,000 VB owed to Metro Retail for each tick its processing is not delivered, up to 5,000 VB."
+      ],
+      [
+        "Your memorandum",
+        "With TrustLayer, the city's cybersecurity and compliance company: \"Security monitoring and an audit that counts toward the payments licence.\" A recorded need, not a contract."
+      ],
+      [
+        "A memorandum you hold",
+        "From GreenGrid, the city's climate and energy company: \"Payment processing for our customer receipts.\" Their need, not a contract."
+      ]
+    ],
+    "leads_table": [
+      [
+        "Lead",
+        "What you know"
+      ],
+      [
+        "Market Street Traders Association",
+        "A big customer at the Customer desk. Forty cash-only shops want processing that goes live fast, below what the Bank charges, plus short working capital. The working capital needs the payments licence first."
+      ],
+      [
+        "An AI business",
+        "Wants verified transaction data to train its models. Find out who."
+      ],
+      [
+        "A security firm",
+        "Sells monitoring that regulators accept. Security cover is what you need most, and your way to the licence."
+      ]
+    ],
+    "dependencies_table": [
+      [
+        "You need",
+        "Who might supply it",
+        "If nobody does"
+      ],
+      [
+        "Security and compliance (critical)",
+        "TrustLayer, your memorandum partner, and maybe others",
+        "Government's security compliance review: 20 Data units, a full system description, 1,500 VB, 2 ticks"
+      ],
+      [
+        "Compute hosting",
+        "A hosting company, if one is in the city",
+        "The Supplier Market or the Bank"
+      ],
+      [
+        "Analytics",
+        "An analytics company, if one is in the city",
+        "A specialist from the Talent Exchange"
+      ],
+      [
+        "Trained talent",
+        "A training company, if one is in the city",
+        "The Talent Exchange"
+      ]
+    ],
+    "objectives_table": [
+      [
+        "Layer",
+        "Target"
+      ],
+      [
+        "Survive",
+        "Never Distressed two ticks running; solvent at the freeze"
+      ],
+      [
+        "Revenue",
+        "18,000 VB of new revenue by the freeze, not counting the anchor's first six ticks"
+      ],
+      [
+        "Grow",
+        "Hold the payments licence and complete one merchant advance"
+      ],
+      [
+        "Public objective",
+        "Process payments for at least half of the other active companies by the freeze, with security cover in place"
+      ]
+    ],
+    "intel_facts_table": [
+      [
+        "",
+        ""
+      ],
+      [
+        "Your vantage point",
+        "You see payment flows, so you can tell which companies are running out of cash. Selling or sharing that is a deal like any other."
+      ],
+      [
+        "Inside fact",
+        "\"Our transaction data shows which businesses are short of cash about two ticks before anyone else notices.\""
+      ],
+      [
+        "Market fact",
+        "\"The city's security firm has a credible product but has not signed a regulated client this quarter.\""
+      ],
+      [
+        "Rumour",
+        "\"The Bank plans to launch its own merchant advances at a cheaper rate.\""
+      ],
+      [
+        "Overheard",
+        "\"A merchant on our rails had an unusual spike in refunds last week.\""
+      ]
+    ],
+    "dossier_filename": "02 - Ledgerly - Founder Dossier.docx",
+    "dossier_url": "/dossiers/02 - Ledgerly - Founder Dossier.docx",
+    "dossier_slug_url": "/dossiers/comp_ledgerly.docx",
+    "all_paragraphs": [
+      "VENTURE CITY \u00b7 FOUNDER DOSSIER",
+      "Ledgerly",
+      "Saturday 10 October 2026 \u00b7 For every founder and member of staff of Ledgerly",
+      "What your company knows at City Opens. New messages arrive in your company inbox during the day. Your live numbers are on the Company Station: if this dossier and the Station disagree, the Station is right.",
+      "At a glance",
+      "You run the payment rails half the city could be using, and almost nobody knows your name. Ledgerly moves money for merchants, sees cash flowing through the city before anyone else does, and has a product that works. What it lacks is a salesperson, a payments licence, and the security cover to grow without worrying what the next merchant brings.",
+      "A letter from the founders",
+      "Team,",
+      "We left the bank because we watched small shops lose sales for want of a card machine they could afford. We built the rails in a spare room, and they worked the first time.",
+      "Then we made the mistake engineers make. We assumed that if we built something good, people would find it. Every merchant we have came because another merchant told them about us. We never hired anyone to knock on doors, so we never knocked.",
+      "You inherit rails that work, merchants who trust us, and a promise that one day we would lend to the people the Bank turns away. Be careful who you let onto the rails, and careful what you promise.",
+      "Sign people. Stay safe. Get the licence.",
+      "The founders",
+      "Who you are",
+      "Your team",
+      "Your CEO is a volunteer playing the Dealmaker: every problem is a deal; won't walk away from a table; tends to overcommit.",
+      "Your staff are strong in engineering. You are one person short in Growth / Sales: nobody sells, and every merchant you have arrived by recommendation. That empty seat costs 225 VB every tick until it is filled. Everyone starts at Level 0 on 100 VB per tick.",
+      "Before Market Open, elect two Authorised Signatories. Either can approve spending up to 5,000 VB; above that needs the CEO or both together. Pick people who will be around when the licence and the security decision land.",
+      "Capital and resources",
+      "Figures assume a 9-person company; the platform sets your real numbers when registration closes. Your Company Station (the CEO volunteer's tablet) shows your live cash, stock, contracts, deadlines and people. Your Participant Portal (scan the QR on your badge) holds your wallet, offers and the deals you propose. There is no physical money: the platform is the record.",
+      "Products",
+      "Merchant advance (needs the payments licence). Once licensed, you may offer companies working-capital advances of 2,000 to 5,000 VB, repaid over 3 ticks, at a fee you set. To win, the fee must beat the Bank's working-capital rate. The cash comes from your own balance, so every advance is a risk you carry.",
+      "What you start with: obligations",
+      "Customers and leads",
+      "Metro Retail Federation is your only steady income. It has never used its refund clause and would like to keep it that way.",
+      "Open customer cards sit at the Customer desk. Ask what each customer must have, and listen for what they need but did not write down.",
+      "Who you need, and who needs you",
+      "Others need you for payments (almost every company that takes customer receipts and would rather not pay the Bank 3%, GreenGrid among them) and verified datasets (an analytics or AI firm, or a security firm). Your rival is the Bank: it processes anyone's payments at 3% of receipts and lends at its published rates. It is also where you will buy Data and lock your proof of funds.",
+      "Immediate challenges",
+      "Bottleneck: Data. Every processing block and every dataset spends it.",
+      "Weakness: a strong product with nobody selling it.",
+      "Known risks: no lending until licensed, and the licence needs security evidence you cannot produce alone; chargebacks on any missed tick; your anchor renewal after Tick 6.",
+      "Objectives",
+      "Your CEO also holds a private objective in a sealed envelope, and each of you has a personal objective in your Portal.",
+      "Options on the table",
+      "Obvious: sign other companies up for processing; most of the city needs it.",
+      "Worth finding: the traders' association wants credit as well as processing; the city's security firm has no regulated client yet and may deal on price.",
+      "Bigger moves: turn from payments to credit, backing advances the Bank will not make; build a fraud-scoring service on the unfinished prototype; merge with the security provider; buy a failed company's customer list.",
+      "What only you know",
+      "None of these is marked true or false. You may share, sell or trade them. Some people on your team may hold a sealed note the rest have not seen. Ask.",
+      "Rules that matter most",
+      "A company is Distressed if its cash is below zero after a tick, it misses a loan payment, it has fewer than 3 staff, or a High or Very High resource sits at 0 for 2 ticks. You then have 2 ticks to fix it.",
+      "Stock: a warning at 30 units; at 15, anything using that resource costs 25% more of it; at 0, deliveries stop.",
+      "The payments licence needs security evidence (an attestation from an Approved Auditor, or a pass from Government's review), a 5,000 VB proof-of-funds certificate from the Bank, a Finance employee at Level 2 or above, and a 1,000 VB fee.",
+      "Anyone may negotiate. A deal proposed in the Portal is real only when a signatory or the CEO accepts it.",
+      "Desks enter your purchases, loans, contracts and licences on the platform; check the Station afterwards.",
+      "Nothing settles before Tick 1. No outside internet or AI until the Internet Unlock at Tick 8.",
+      "Stuck on the platform? The helpdesk is open all day."
+    ]
+  },
+  {
+    "id": "comp_mango",
+    "code": "MAN",
+    "name": "Mango & Co.",
+    "sector": "Consumer brand: mango foods, drinks and lifestyle goods",
+    "tagline": "A high margin on branded boxes; high marketing spend; you sell access to your community to other brands.",
+    "description": "Began as a weekend stall selling mango pulp. A viral recipe turned the stall into a subscription box and a community of fans. The founders outsourced everything except the brand, and packing still happens by hand in the back of the office. Bring the taste of a mango summer to every home, all year.",
+    "cluster": "Physical",
+    "workforce_mix": "Market-led",
+    "fills_slots": [
+      "S12"
+    ],
+    "critical_slot": "S5 Manufacturing",
+    "ceo_persona": "Brand Purist",
+    "deficit_domain": "Operations",
+    "hidden_lever": "Hidden buyer: a retail-chain card appears once it holds a manufacturing deal",
+    "vulnerability": "Fragile supply: produce supply fails on weather event",
+    "consumption": {
+      "compute": "Medium",
+      "energy": "Medium",
+      "logistics": "High",
+      "materials": "High",
+      "data": "High",
+      "infrastructure": "Medium"
+    },
+    "initial_cash": 29550,
+    "scarcest_resources": "Materials, which runs out during Tick 8 if you buy none (Logistics during Tick 9)",
+    "deadlines": "Tick 1: your first two boxes are due, and every missed tick costs 1,500 VB in refunds. Tick 4: your cheap fruit-pulp deal ends, and your public objective wants a standing manufacturing contract. After Tick 6: your anchor customer comes up for renewal",
+    "cannot_do_alone": "Manufacturing: without a factory you cannot sell a single box beyond the ones you already owe",
+    "gate_licence": "The Food Safety Certificate, from Government",
+    "notable_asset": "The brand, book value 7,000 VB (it counts as Bank collateral)",
+    "at_a_glance": "You run the most loved brand in Venture City and you cannot make your own product. Mango & Co. has a fan community, a subscription club and a name that Media writes about for free. It also owes its anchor customer two boxes every tick from Tick 1, and the only way it can make them today is by hand, two at a time.",
+    "founder_letter": "Team,\n\nIt started with a cool box of mango pulp on a folding table, every Saturday, for a summer. Then somebody posted our recipe, and on Monday we had four hundred messages asking where to buy it. We never caught up.\n\nWe decided early to own the brand and nothing else. Somebody else would grow the fruit, make the product and carry it to the door. We would make people love it. They do.\n\nThe Club expects two boxes every tick, starting now. We can pack two by hand, exactly enough and not one more. A supermarket would stock us if we were certified, and we are not.\n\nNever cheapen the brand. But do not mistake the brand for the business. Sunshine in a box. Go and find the box.\n\nThe founders",
+    "products_table": [
+      [
+        "",
+        "Mango product box",
+        "Community feature"
+      ],
+      [
+        "Buyer gets",
+        "One branded box of mango foods, drinks or lifestyle goods, delivered",
+        "A featured spot in your community channel and one named household customer lead in the buyer's sector, confirmed by the Customer desk"
+      ],
+      [
+        "Uses per unit",
+        "Hand-packed: 2 Materials, 1 Logistics. With a manufacturing deal: 1 finished unit plus 1 Logistics",
+        "1 Data"
+      ],
+      [
+        "Up to, per tick",
+        "2 by hand; 4 with a manufacturing deal",
+        "2"
+      ],
+      [
+        "List / lowest price (VB)",
+        "550 / 450",
+        "300 / 220"
+      ],
+      [
+        "Sold to",
+        "Household customer cards; retail-chain cards once certified",
+        "Other companies"
+      ],
+      [
+        "Licence",
+        "Retail chains need the Food Safety Certificate",
+        "None"
+      ]
+    ],
+    "obligations_table": [
+      [
+        "Obligation",
+        "Terms"
+      ],
+      [
+        "Anchor customer",
+        "Mango Club Subscribers: 2 boxes every tick at 550 VB each, Ticks 1 to 6 (6,600 VB). Then up for renewal at the Customer desk."
+      ],
+      [
+        "Supplier deal",
+        "Riverbend Growers Co-op: fruit pulp and packaging (Materials) at 13 VB a unit (about 13% below normal), up to 12 a tick, paid one tick after delivery. Ends at Tick 4 unless you commit to 3 ticks at 12 units."
+      ],
+      [
+        "Refunds",
+        "1,500 VB owed to the Club for each tick a box delivery is missed, up to 6,000 VB."
+      ],
+      [
+        "Your memorandum",
+        "With SwiftCart, the city's quick-commerce and delivery company: \"Last-mile delivery of our product units to customers' homes.\" A recorded need, not a contract."
+      ],
+      [
+        "A memorandum you hold",
+        "From SkillForge, the city's training and talent company: \"Featured access to the consumer community to sign up learners.\" Their need, not a contract."
+      ]
+    ],
+    "leads_table": [
+      [
+        "Lead",
+        "What you know"
+      ],
+      [
+        "FreshWay Supermarkets",
+        "A big retail chain at the Customer desk that wants 3 boxes a tick for its stores. It will not stock anything without the Food Safety Certificate, and hand-packing alone cannot make 3 more a tick."
+      ],
+      [
+        "A factory",
+        "Has idle line time and wants a steady client. Find out who, or whether it is in this city at all."
+      ],
+      [
+        "A training business",
+        "Needs to reach young consumers. Your community feature sells exactly this, and SkillForge has already asked."
+      ]
+    ],
+    "dependencies_table": [
+      [
+        "You need",
+        "Who might supply it",
+        "If nobody does"
+      ],
+      [
+        "Manufacturing (critical)",
+        "A contract factory, if one is in the city",
+        "The Supplier Market's contract manufacturer: 1,200 VB a batch plus 30 of your own Materials, paid up front, delivered next tick"
+      ],
+      [
+        "Home delivery",
+        "SwiftCart, your memorandum partner, and maybe others",
+        "The Logistics Provider: standard delivery next tick, or immediate at 1.5 times the price"
+      ],
+      [
+        "Raw materials and produce",
+        "A grower network, if one is in the city",
+        "The Supplier Market; your Riverbend line until Tick 4"
+      ],
+      [
+        "Payments",
+        "A payments company",
+        "The Bank's merchant service, 3% of your receipts"
+      ]
+    ],
+    "objectives_table": [
+      [
+        "Layer",
+        "Target"
+      ],
+      [
+        "Survive",
+        "Never Distressed two ticks running; solvent at the freeze"
+      ],
+      [
+        "Revenue",
+        "18,000 VB of new revenue by the freeze, not counting the anchor's first six ticks"
+      ],
+      [
+        "Grow",
+        "Hold the Food Safety Certificate and sign one retail-chain contract"
+      ],
+      [
+        "Public objective",
+        "Deliver every anchor box on time, and hold a standing manufacturing contract by Tick 4"
+      ]
+    ],
+    "intel_facts_table": [
+      [
+        "",
+        ""
+      ],
+      [
+        "Your vantage point",
+        "You know what your community members want: a list worth selling, carefully."
+      ],
+      [
+        "Inside fact",
+        "\"Our community has thousands of active members, and a quarter of them told us they want to learn new skills.\""
+      ],
+      [
+        "Market fact",
+        "\"The Supplier Market sells finished goods, but at a premium and only in its minimum order size.\""
+      ],
+      [
+        "Rumour",
+        "\"A rival brand is about to launch a cheaper mango drink.\""
+      ],
+      [
+        "Overheard",
+        "\"Our pulp supplier mentioned the orchards had a dry spring.\""
+      ]
+    ],
+    "dossier_filename": "03 - Mango and Co - Founder Dossier.docx",
+    "dossier_url": "/dossiers/03 - Mango and Co - Founder Dossier.docx",
+    "dossier_slug_url": "/dossiers/comp_mango.docx",
+    "all_paragraphs": [
+      "VENTURE CITY \u00b7 FOUNDER DOSSIER",
+      "Mango & Co.",
+      "Saturday 10 October 2026 \u00b7 For every founder and member of staff of Mango & Co.",
+      "What your company knows at City Opens. New messages arrive in your company inbox during the day. Your live numbers are on the Company Station: if this dossier and the Station disagree, the Station is right.",
+      "At a glance",
+      "You run the most loved brand in Venture City and you cannot make your own product. Mango & Co. has a fan community, a subscription club and a name that Media writes about for free. It also owes its anchor customer two boxes every tick from Tick 1, and the only way it can make them today is by hand, two at a time.",
+      "A letter from the founders",
+      "Team,",
+      "It started with a cool box of mango pulp on a folding table, every Saturday, for a summer. Then somebody posted our recipe, and on Monday we had four hundred messages asking where to buy it. We never caught up.",
+      "We decided early to own the brand and nothing else. Somebody else would grow the fruit, make the product and carry it to the door. We would make people love it. They do.",
+      "The Club expects two boxes every tick, starting now. We can pack two by hand, exactly enough and not one more. A supermarket would stock us if we were certified, and we are not.",
+      "Never cheapen the brand. But do not mistake the brand for the business. Sunshine in a box. Go and find the box.",
+      "The founders",
+      "Who you are",
+      "Your team",
+      "Your CEO is a volunteer playing the Brand Purist: the brand is the asset; won't discount; tends to undervalue partnerships.",
+      "Your staff are marketers and community builders. You are one person short in Operations: nobody has ever run a supply chain or negotiated with a factory. That empty seat costs 225 VB every tick until it is filled. Everyone starts at Level 0 on 100 VB per tick.",
+      "Before Market Open, elect two Authorised Signatories. Either can approve spending up to 5,000 VB; above that needs the CEO or both together. Pick people who will be around at Tick 1, when the first boxes are due.",
+      "Capital and resources",
+      "Figures assume a 9-person company; the platform sets your real numbers when registration closes. Your Company Station (the CEO volunteer's tablet) shows your live cash, stock, contracts, deadlines and people. Your Participant Portal (scan the QR on your badge) holds your wallet, offers and the deals you propose. There is no physical money: the platform is the record.",
+      "Products",
+      "What you start with: obligations",
+      "Customers and leads",
+      "Mango Club Subscribers is your only steady income. Its members have already posted photos of their empty fruit bowls.",
+      "Open customer cards sit at the Customer desk. Ask what each customer must have, and listen for what they need but did not write down.",
+      "Who you need, and who needs you",
+      "Others need you for a consumer audience and community (a training business, SkillForge among them, and any company that needs household customers it cannot find alone). Your rival is the Media desk, and it loves you: a company that wants consumers can buy a Media featured story at 600 VB, while your feature costs 300 VB and comes with a named lead. Media is also your cheapest megaphone.",
+      "Immediate challenges",
+      "Bottleneck: no factory. Hand-packing caps you at 2 boxes a tick, exactly what the anchor needs.",
+      "Weakness: nobody runs a supply chain.",
+      "Known risks: refunds from Tick 1 if the first boxes are not delivered; a CEO who resists discounts and partners; your anchor renewal after Tick 6.",
+      "Objectives",
+      "Your CEO also holds a private objective in a sealed envelope, and each of you has a personal objective in your Portal.",
+      "Options on the table",
+      "Obvious: sign a manufacturing deal and a home-delivery deal before Tick 1 settles; renew the anchor.",
+      "Worth finding: the Supplier Market sells finished goods, one route to a factory box; a training business wants your community's audience.",
+      "Bigger moves: move from selling direct to wholesale and private label; sell community events to other brands; spin out a community and media unit; merge with a produce supplier or a manufacturer; be the own-brand goods a delivery company wants to buy.",
+      "What only you know",
+      "None of these is marked true or false. You may share, sell or trade them. Some people on your team may hold a sealed note the rest have not seen. Ask.",
+      "Rules that matter most",
+      "A company is Distressed if its cash is below zero after a tick, it misses a loan payment, it has fewer than 3 staff, or a High or Very High resource sits at 0 for 2 ticks. You then have 2 ticks to fix it.",
+      "Stock: a warning at 30 units; at 15, anything using that resource costs 25% more of it; at 0, deliveries stop.",
+      "The Food Safety Certificate needs one product unit delivered to the Government desk for inspection, a hygiene plan, an Operations employee at Level 1 or above, and a 500 VB fee. Government inspects only one food product a tick, from one shared queue.",
+      "Anyone may negotiate. A deal proposed in the Portal is real only when a signatory or the CEO accepts it.",
+      "Desks enter your purchases, loans, contracts and licences on the platform; check the Station afterwards.",
+      "Nothing settles before Tick 1. No outside internet or AI until the Internet Unlock at Tick 8.",
+      "Stuck on the platform? The helpdesk is open all day."
+    ]
+  },
+  {
+    "id": "comp_skillforge",
+    "code": "SKF",
+    "name": "SkillForge",
+    "sector": "Training and talent marketplace (edtech)",
+    "tagline": "Learners or their employers pay for course cohorts; companies pay a placement fee for each hire.",
+    "description": "Founded by a teacher and a recruiter who were tired of graduates nobody would hire. The bootcamps fill when the marketing works; employers sign up only when they see results. Half your alumni are still looking for work. Every person in the city can learn a skill that gets them hired.",
+    "cluster": "Digital",
+    "workforce_mix": "Market-led",
+    "fills_slots": [
+      "S10"
+    ],
+    "critical_slot": "S12 Consumer audience",
+    "ceo_persona": "Mission Idealist",
+    "deficit_domain": "Product / Build",
+    "hidden_lever": "Network effect: each company hiring through it adds revenue per tick",
+    "vulnerability": "Concentration: depends on corporate training buyer",
+    "consumption": {
+      "compute": "High",
+      "energy": "Low",
+      "logistics": "Low",
+      "materials": "Low",
+      "data": "High",
+      "infrastructure": "Medium"
+    },
+    "initial_cash": 32050,
+    "scarcest_resources": "Compute and Data, which run out during Tick 10 if you buy none",
+    "deadlines": "Tick 4: your cheap Compute deal ends. Tick 5: your lead instructor leaves unless a deal to keep them is recorded first. After Tick 6: your anchor customer comes up for renewal",
+    "cannot_do_alone": "A consumer audience: you cannot fill a cohort with people you cannot reach",
+    "gate_licence": "Course accreditation, from Government. It opens the city's skilling tender",
+    "notable_asset": "Customer list of learners and alumni, book value 4,000 VB (it counts as Bank collateral)",
+    "at_a_glance": "You run a talent marketplace in a city where every company is short of someone. SkillForge trains people and places them into jobs, and its learners love it. The trouble is that a marketplace needs both sides at once: you have too few employers and too few learners, one corporate client paying the bills, and a course platform that is only half built.",
+    "founder_letter": "Team,\n\nOne of us spent ten years teaching, the other ten years recruiting. We kept meeting at the same careers fairs, either side of the same problem: graduates nobody would hire, and employers who could not find anyone. So we built the bridge ourselves.\n\nLearners come when the marketing works, and leave proud of what they can do. Employers come only when they see results, and \"proud\" is not a result.\n\nYou inherit one corporate client, a course platform held together with spreadsheets, and a lead instructor who has carried this place on goodwill for too long. Please talk to them.\n\nSkills in weeks. Jobs in days. Prove it.\n\nThe founders",
+    "products_table": [
+      [
+        "",
+        "Placement",
+        "Course cohort"
+      ],
+      [
+        "Buyer gets",
+        "One trained hire placed within the tick into the domain the buyer names, counting toward its headcount there for the rest of the run",
+        "One tick of training for a cohort of learners or staff"
+      ],
+      [
+        "Uses per unit",
+        "1 Compute, 1 Data",
+        "1 Compute, 1 Data"
+      ],
+      [
+        "Up to, per tick",
+        "2 (6 in the whole run)",
+        "3"
+      ],
+      [
+        "List / lowest price (VB)",
+        "450 / 300",
+        "900 / 600"
+      ],
+      [
+        "Sold to",
+        "Other companies, especially any company short in a domain",
+        "Business and household customer cards; Government once accredited"
+      ],
+      [
+        "Licence",
+        "None",
+        "Government buyers need course accreditation"
+      ]
+    ],
+    "obligations_table": [
+      [
+        "Obligation",
+        "Terms"
+      ],
+      [
+        "Anchor customer",
+        "Allied Services Corp: 1 cohort-tick of corporate training every tick at 900 VB, Ticks 1 to 6 (5,400 VB). Then up for renewal at the Customer desk."
+      ],
+      [
+        "Supplier deal",
+        "CoreCompute: Compute at 17 VB a unit (15% below normal), up to 10 a tick. Ends at Tick 4 unless you commit to 3 ticks at 10 units."
+      ],
+      [
+        "Key person",
+        "Your lead instructor leaves at Tick 5 unless a deal to keep them (a salary step or a new role) is recorded on the platform first."
+      ],
+      [
+        "Your memorandum",
+        "With Mango & Co., the city's consumer brand and its fan community: \"Featured access to the consumer community to sign up learners.\" A recorded need, not a contract."
+      ]
+    ],
+    "leads_table": [
+      [
+        "Lead",
+        "What you know"
+      ],
+      [
+        "City Skilling Programme",
+        "A Government tender, announced in Government's tender window, that will need accredited providers. Accreditation needs one cohort accepted by a customer and a course author in Product or Research at Level 2."
+      ],
+      [
+        "A consumer brand's community",
+        "Full of people who want to learn. Mango & Co., your memorandum partner, holds it. A deal brings you learners."
+      ],
+      [
+        "A payments firm",
+        "Cannot find salespeople. Find out who. A placement into their sales gap is exactly what you sell."
+      ]
+    ],
+    "dependencies_table": [
+      [
+        "You need",
+        "Who might supply it",
+        "If nobody does"
+      ],
+      [
+        "Consumer audience (critical)",
+        "Mango & Co., your memorandum partner, and maybe others",
+        "Media: a featured story at 600 VB"
+      ],
+      [
+        "Compute hosting",
+        "A hosting company, if one is in the city",
+        "The Supplier Market or the Bank"
+      ],
+      [
+        "Payments",
+        "A payments company",
+        "The Bank's merchant service, 3% of your receipts"
+      ],
+      [
+        "Analytics",
+        "An analytics company",
+        "A specialist from the Talent Exchange"
+      ]
+    ],
+    "objectives_table": [
+      [
+        "Layer",
+        "Target"
+      ],
+      [
+        "Survive",
+        "Never Distressed two ticks running; solvent at the freeze"
+      ],
+      [
+        "Revenue",
+        "18,000 VB of new revenue by the freeze, not counting the anchor's first six ticks"
+      ],
+      [
+        "Grow",
+        "Hold course accreditation and win the skilling tender"
+      ],
+      [
+        "Public objective",
+        "Place trained hires into 3 different companies by the freeze"
+      ]
+    ],
+    "intel_facts_table": [
+      [
+        "",
+        ""
+      ],
+      [
+        "Your vantage point",
+        "You know which companies are short of which skills, because they ask."
+      ],
+      [
+        "Inside fact",
+        "\"Half our alumni are still looking for work; we could place them tomorrow if employers came to us.\""
+      ],
+      [
+        "Market fact",
+        "\"The city's best-loved consumer brand has a community full of people who want to learn new skills.\""
+      ],
+      [
+        "Rumour",
+        "\"The Talent Exchange is about to run out of specialists in every domain.\""
+      ],
+      [
+        "Overheard",
+        "\"Our anchor's HR head asked twice whether any of our learners have actually been hired yet.\""
+      ]
+    ],
+    "dossier_filename": "04 - SkillForge - Founder Dossier.docx",
+    "dossier_url": "/dossiers/04 - SkillForge - Founder Dossier.docx",
+    "dossier_slug_url": "/dossiers/comp_skillforge.docx",
+    "all_paragraphs": [
+      "VENTURE CITY \u00b7 FOUNDER DOSSIER",
+      "SkillForge",
+      "Saturday 10 October 2026 \u00b7 For every founder and member of staff of SkillForge",
+      "What your company knows at City Opens. New messages arrive in your company inbox during the day. Your live numbers are on the Company Station: if this dossier and the Station disagree, the Station is right.",
+      "At a glance",
+      "You run a talent marketplace in a city where every company is short of someone. SkillForge trains people and places them into jobs, and its learners love it. The trouble is that a marketplace needs both sides at once: you have too few employers and too few learners, one corporate client paying the bills, and a course platform that is only half built.",
+      "A letter from the founders",
+      "Team,",
+      "One of us spent ten years teaching, the other ten years recruiting. We kept meeting at the same careers fairs, either side of the same problem: graduates nobody would hire, and employers who could not find anyone. So we built the bridge ourselves.",
+      "Learners come when the marketing works, and leave proud of what they can do. Employers come only when they see results, and \"proud\" is not a result.",
+      "You inherit one corporate client, a course platform held together with spreadsheets, and a lead instructor who has carried this place on goodwill for too long. Please talk to them.",
+      "Skills in weeks. Jobs in days. Prove it.",
+      "The founders",
+      "Who you are",
+      "Your team",
+      "Your CEO is a volunteer playing the Mission Idealist: impact is the point; won't take \"dirty\" money; tends to ignore unit economics.",
+      "Your staff are strong on sales and community. You are one person short in Product / Build: nobody has finished the platform the courses run on. That empty seat costs 225 VB every tick until it is filled. Everyone starts at Level 0 on 100 VB per tick. Your lead instructor, in Operations, is the school, and nobody has written down what would make them stay.",
+      "Before Market Open, elect two Authorised Signatories. Either can approve spending up to 5,000 VB; above that needs the CEO or both together. Pick people who will be around before Tick 5, when the lead instructor decides.",
+      "Capital and resources",
+      "Figures assume a 9-person company; the platform sets your real numbers when registration closes. Your Company Station (the CEO volunteer's tablet) shows your live cash, stock, contracts, deadlines and people. Your Participant Portal (scan the QR on your badge) holds your wallet, offers and the deals you propose. There is no physical money: the platform is the record.",
+      "Products",
+      "What you start with: obligations",
+      "Customers and leads",
+      "Allied Services Corp is your only steady income, and its head of HR has asked twice whether any of your learners have actually been hired.",
+      "Open customer cards sit at the Customer desk. Ask what each customer must have, and listen for what they need but did not write down.",
+      "Who you need, and who needs you",
+      "Others need you for trained talent and hiring: a payments firm, an analytics firm, a security firm, and in fact any company still one person short. Your rival never closes: the Talent Exchange is open all day and rents out specialists, but it holds only one per active company across all domains, while you place within the tick in the domain the buyer names.",
+      "Immediate challenges",
+      "Bottleneck: you need learners and employers at the same time.",
+      "Weakness: a half-built platform and nobody to finish it.",
+      "Known risks: your lead instructor leaves at Tick 5 without a deal; the Talent Exchange is a free alternative for every buyer; your Compute deal ends at Tick 4; your anchor renewal after Tick 6.",
+      "Objectives",
+      "Your CEO also holds a private objective in a sealed envelope, and each of you has a personal objective in your Portal.",
+      "Options on the table",
+      "Obvious: sell placements into every company's understaffed domain; renew the anchor.",
+      "Worth finding: the city's best-loved consumer brand has a community that wants to learn; a Government skilling tender is coming.",
+      "Bigger moves: move from open bootcamps to corporate training for one sector; build an assessment and credentialing service; create security or AI courses with a partner; merge with an analytics or security provider; take on a failed company's staff as a ready-made cohort.",
+      "What only you know",
+      "None of these is marked true or false. You may share, sell or trade them. Some people on your team may hold a sealed note the rest have not seen. Ask.",
+      "Rules that matter most",
+      "A company is Distressed if its cash is below zero after a tick, it misses a loan payment, it has fewer than 3 staff, or a High or Very High resource sits at 0 for 2 ticks. You then have 2 ticks to fix it.",
+      "Stock: a warning at 30 units; at 15, anything using that resource costs 25% more of it; at 0, deliveries stop.",
+      "A placement is a Talent Exchange specialist contract supplied by a company instead of the desk.",
+      "Course accreditation needs one cohort delivery accepted by a customer, a course author in Product or Research at Level 2 or above, and a 500 VB fee.",
+      "Anyone may negotiate. A deal proposed in the Portal is real only when a signatory or the CEO accepts it.",
+      "Desks enter your purchases, loans, contracts and licences on the platform; check the Station afterwards.",
+      "Nothing settles before Tick 1. No outside internet or AI until the Internet Unlock at Tick 8.",
+      "Stuck on the platform? The helpdesk is open all day."
+    ]
+  },
+  {
+    "id": "comp_pulseai",
+    "code": "PAI",
+    "name": "PulseAI",
+    "sector": "Business AI software: forecasting and analytics",
+    "tagline": "A fee per model run from companies; per-tick subscriptions from large business buyers, which pay more once pilots prove the model.",
+    "description": "Spun out of a university lab with a forecasting model that beat everything it was tested against. Two years of building later, it has one pilot, a backlog of features and a whiteboard that says \"SELL\" in the corner. Every decision in the city made with a forecast, not a guess.",
+    "cluster": "Digital",
+    "workforce_mix": "Tech-led",
+    "fills_slots": [
+      "S9"
+    ],
+    "critical_slot": "S3 Compute hosting",
+    "ceo_persona": "Product Perfectionist",
+    "deficit_domain": "Growth / Sales",
+    "hidden_lever": "Multiplier: Enterprise contracts pay a stated premium",
+    "vulnerability": "Key person: lead ML engineer leaves at stated tick",
+    "consumption": {
+      "compute": "Very High",
+      "energy": "High",
+      "logistics": "Low",
+      "materials": "Low",
+      "data": "Very High",
+      "infrastructure": "High"
+    },
+    "initial_cash": 30050,
+    "scarcest_resources": "Compute, which runs out during Tick 6 if you buy none: the earliest run-out in the city",
+    "deadlines": "Tick 4: your cheap Compute deal ends. Tick 6: your public objective wants 2 completed pilots and model runs sold to 3 companies. After Tick 6: your anchor customer comes up for renewal",
+    "cannot_do_alone": "Compute hosting: your model eats more Compute than you can afford to buy one unit at a time",
+    "gate_licence": "Two completed pilots, recorded by the Customer desk. Your current pilot does not count",
+    "notable_asset": "A working forecasting model (prototype), book value 7,500 VB (it counts as Bank collateral)",
+    "at_a_glance": "You have the best technology in Venture City and almost no paying customers. PulseAI's forecasting model is in demand everywhere: almost every company in town has a decision it would like to make better. But the model runs on aging code that wastes Compute, you burn Compute faster than anyone in the city, and nobody on the team has ever sold anything.",
+    "founder_letter": "Team,\n\nPulseAI started in a university lab with one idea: a good forecast beats a confident guess, every time. We built a model that beat everything we tested it against, and we kept building.\n\nTwo years later we have one loyal pilot and a backlog as long as the corridor. Every week the code gets a little older and a little hungrier. We never hired anyone to go out and ask for money, because we thought the model would sell itself. Models do not sell themselves. People sell them.\n\nYou are inheriting the best tool in this city, sitting in a drawer. Ship something. Then make it better.\n\nThe founders",
+    "products_table": [
+      [
+        "",
+        "Model run",
+        "Analytics subscription"
+      ],
+      [
+        "Buyer gets",
+        "A run that sharpens one recurring decision: the buyer uses 4 fewer units a tick of one resource it names, for the next 2 ticks; meets any customer card that asks for analytics",
+        "One tick of forecasting for a large business buyer's operations"
+      ],
+      [
+        "Uses per unit",
+        "1 Compute, 1 Data",
+        "1 Compute, 1 Data"
+      ],
+      [
+        "Up to, per tick",
+        "4",
+        "3"
+      ],
+      [
+        "List / lowest price (VB)",
+        "150 / 110",
+        "1,000 / 700"
+      ],
+      [
+        "Sold to",
+        "Other companies",
+        "Large business customer cards: pilots now, full contracts after your gate"
+      ],
+      [
+        "Licence",
+        "None",
+        "Full contracts need 2 completed pilots"
+      ]
+    ],
+    "obligations_table": [
+      [
+        "Obligation",
+        "Terms"
+      ],
+      [
+        "Anchor customer",
+        "Quayside Distribution: a pilot of 1 subscription-tick every tick at 700 VB, Ticks 1 to 6 (4,200 VB). Then up for renewal at the Customer desk. It does not count toward your gate."
+      ],
+      [
+        "Supplier deal",
+        "CoreCompute: Compute at 17 VB a unit (15% below normal), up to 15 a tick. Ends at Tick 4 unless you commit to 3 ticks at 15 units."
+      ],
+      [
+        "Technical debt",
+        "Your old code burns 3 extra Compute every tick until it is fixed, through a fix mission or a fix bought from another company."
+      ],
+      [
+        "Your memorandum",
+        "With StackHouse, the city's compute host: \"Hosted compute for model runs, below the market price.\" A recorded need, not a contract."
+      ]
+    ],
+    "leads_table": [
+      [
+        "Lead",
+        "What you know"
+      ],
+      [
+        "Atlas Retail Group",
+        "A big customer at the Customer desk with stockouts and waste across 30 stores. It needs demand forecasting, with a budget of 3,000 VB a tick for 5 ticks. It will not sign without two completed pilots on record and security evidence."
+      ],
+      [
+        "A delivery business",
+        "Losing money on badly planned routes. Find out who. A run that cuts one resource draw is exactly what you sell."
+      ],
+      [
+        "A health marketplace",
+        "Holds clean patient-outcome data it cannot yet sell. Find out who, and what stops them."
+      ]
+    ],
+    "dependencies_table": [
+      [
+        "You need",
+        "Who might supply it",
+        "If nobody does"
+      ],
+      [
+        "Compute hosting (critical)",
+        "StackHouse, your memorandum partner",
+        "The Supplier Market's Compute sellers, or the Bank at 20 VB a unit, up to 30 a tick"
+      ],
+      [
+        "Energy supply",
+        "An energy supplier, if one is in the city",
+        "The Bank or the Supplier Market"
+      ],
+      [
+        "Security and compliance",
+        "A security firm, if one is in the city",
+        "Government's security compliance review: 20 Data units, a full system description, 1,500 VB, 2 ticks"
+      ],
+      [
+        "Trained talent",
+        "A training business, if one is in the city",
+        "The Talent Exchange"
+      ],
+      [
+        "Verified datasets",
+        "A company holding clean, verified data",
+        "The Supplier Market"
+      ]
+    ],
+    "objectives_table": [
+      [
+        "Layer",
+        "Target"
+      ],
+      [
+        "Survive",
+        "Never Distressed two ticks running; solvent at the freeze"
+      ],
+      [
+        "Revenue",
+        "18,000 VB of new revenue by the freeze, not counting the anchor's first six ticks"
+      ],
+      [
+        "Grow",
+        "Complete 2 pilots and sign one full contract with a large business buyer"
+      ],
+      [
+        "Public objective",
+        "Sell model runs to 3 companies and complete 2 pilots by Tick 6"
+      ]
+    ],
+    "intel_facts_table": [
+      [
+        "",
+        ""
+      ],
+      [
+        "Your vantage point",
+        "Your runs for other companies show you their weak spots. What you do with that is a deal like any other."
+      ],
+      [
+        "Inside fact",
+        "\"Our model is good enough to sell today; the team keeps adding features instead.\""
+      ],
+      [
+        "Market fact",
+        "\"The city's compute host has half its halls empty and would rather sell cheap than sit idle.\""
+      ],
+      [
+        "Rumour",
+        "\"Enterprise buyers are about to freeze AI budgets.\""
+      ],
+      [
+        "Overheard",
+        "\"Our lead ML engineer was seen having coffee with a recruiter.\""
+      ]
+    ],
+    "dossier_filename": "05 - PulseAI - Founder Dossier.docx",
+    "dossier_url": "/dossiers/05 - PulseAI - Founder Dossier.docx",
+    "dossier_slug_url": "/dossiers/comp_pulseai.docx",
+    "all_paragraphs": [
+      "VENTURE CITY \u00b7 FOUNDER DOSSIER",
+      "PulseAI",
+      "Saturday 10 October 2026 \u00b7 For every founder and member of staff of PulseAI",
+      "What your company knows at City Opens. New messages arrive in your company inbox during the day. Your live numbers are on the Company Station: if this dossier and the Station disagree, the Station is right.",
+      "At a glance",
+      "You have the best technology in Venture City and almost no paying customers. PulseAI's forecasting model is in demand everywhere: almost every company in town has a decision it would like to make better. But the model runs on aging code that wastes Compute, you burn Compute faster than anyone in the city, and nobody on the team has ever sold anything.",
+      "A letter from the founders",
+      "Team,",
+      "PulseAI started in a university lab with one idea: a good forecast beats a confident guess, every time. We built a model that beat everything we tested it against, and we kept building.",
+      "Two years later we have one loyal pilot and a backlog as long as the corridor. Every week the code gets a little older and a little hungrier. We never hired anyone to go out and ask for money, because we thought the model would sell itself. Models do not sell themselves. People sell them.",
+      "You are inheriting the best tool in this city, sitting in a drawer. Ship something. Then make it better.",
+      "The founders",
+      "Who you are",
+      "Your team",
+      "Your CEO is a volunteer playing the Product Perfectionist: build it right, then sell; won't sell vapourware; tends to ship late.",
+      "Your staff are engineers. You are one person short in Growth / Sales: nobody has a list of buyers, a price sheet or a pitch. That empty seat costs 225 VB every tick until it is filled. Everyone starts at Level 0 on 100 VB per tick.",
+      "Before Market Open, elect two Authorised Signatories. Either can approve spending up to 5,000 VB; above that needs the CEO or both together. Pick people who will be around at Tick 4.",
+      "Capital and resources",
+      "Figures assume a 9-person company; the platform sets your real numbers when registration closes. Your Company Station (the CEO volunteer's tablet) shows your live cash, stock, contracts, deadlines and people. Your Participant Portal (scan the QR on your badge) holds your wallet, offers and the deals you propose. There is no physical money: the platform is the record.",
+      "Products",
+      "A pilot runs 1 to 2 ticks at no more than 25% of the card's per-tick budget. Pilots are not where you make money. They are the key to the door where you do.",
+      "What you start with: obligations",
+      "Customers and leads",
+      "Quayside Distribution is your only income. Its team likes the forecasts, and if you want a reference from it later, earn it now.",
+      "Open customer cards sit at the Customer desk. Ask what each customer must have, and listen for what they need but did not write down. Your two pilots have to come from cards worked during play.",
+      "Who you need, and who needs you",
+      "Others need you for analytics: almost any company with a decision it makes every tick and a resource it would like to burn less of. Data is everybody's problem: you compete for it with three other heavy users, and every run and every pilot spends a unit.",
+      "Immediate challenges",
+      "Bottleneck: Compute and Data are both used Very High, and the old code adds 3 Compute a tick.",
+      "Weakness: engineers who cannot sell.",
+      "Known risks: big contracts stay locked until 2 pilots are completed; a CEO who keeps perfecting instead of selling; your Compute deal ends at Tick 4; your anchor renewal after Tick 6.",
+      "Objectives",
+      "Your CEO also holds a private objective in a sealed envelope, and each of you has a personal objective in your Portal.",
+      "Options on the table",
+      "Obvious: sell model runs to the many companies that need analytics; land a second pilot.",
+      "Worth finding: the city's compute host has idle halls; a health marketplace's data would make health forecasts worth far more.",
+      "Bigger moves: narrow to one field (health, logistics or energy forecasting) around one paying customer; build route optimisation for physical companies or credit scoring with a payments partner; merge with the compute host or the health marketplace; hire a failing company's engineers; be the in-house AI a health or payments company wants.",
+      "What only you know",
+      "None of these is marked true or false. You may share, sell or trade them. Some people on your team may hold a sealed note the rest have not seen. Ask.",
+      "Rules that matter most",
+      "A company is Distressed if its cash is below zero after a tick, it misses a loan payment, it has fewer than 3 staff, or a High or Very High resource sits at 0 for 2 ticks. You then have 2 ticks to fix it.",
+      "Stock: a warning at 30 units; at 15, anything using that resource costs 25% more of it; at 0, deliveries stop.",
+      "A pilot is completed when the Customer desk accepts the delivery. Your starting pilot with Quayside does not count, so both pilots come from cards worked during play.",
+      "Anyone may negotiate. A deal proposed in the Portal is real only when a signatory or the CEO accepts it.",
+      "Desks enter your purchases, loans, contracts and licences on the platform; check the Station afterwards.",
+      "Nothing settles before Tick 1. No outside internet or AI until the Internet Unlock at Tick 8.",
+      "Stuck on the platform? The helpdesk is open all day."
+    ]
+  },
+  {
+    "id": "comp_greengrid",
+    "code": "GRG",
+    "name": "GreenGrid",
+    "sector": "Climate and energy: solar-plus-battery supply and efficiency retrofits",
+    "tagline": "Per-tick energy supply contracts, plus one-off retrofits that cut a customer's energy use for good.",
+    "description": "Founded by two engineers who won the city's only grid connection licence and borrowed to build the first solar field. The demand is real; the capital to build more is not. Run the city on clean energy that costs less than the dirty kind.",
+    "cluster": "Physical, Regulated",
+    "workforce_mix": "Ops-led",
+    "fills_slots": [
+      "S4"
+    ],
+    "critical_slot": "S5 Manufacturing",
+    "ceo_persona": "Operator",
+    "deficit_domain": "Finance / Capital",
+    "hidden_lever": "Unlock: green certification opens Government tender buyer",
+    "vulnerability": "Regulatory exposure: subsidy change cuts margin",
+    "consumption": {
+      "compute": "Medium",
+      "energy": "Very High",
+      "logistics": "High",
+      "materials": "Very High",
+      "data": "Medium",
+      "infrastructure": "Very High"
+    },
+    "initial_cash": 32050,
+    "scarcest_resources": "Materials and Infrastructure, which both run out during Tick 7 if you buy none",
+    "deadlines": "Tick 4: your cheap Materials deal ends. After Tick 6: your anchor customer comes up for renewal. Tick 7: 10,000 VB repayment due to the Bank",
+    "cannot_do_alone": "Panels and battery units: every retrofit needs a finished product you cannot make",
+    "gate_licence": "Two signed offtake contracts, recorded by the Bank, open project finance for the Grid Expansion",
+    "notable_asset": "The city's grid connection licence, book value 8,000 VB (it counts as Bank collateral)",
+    "at_a_glance": "You hold the only grid connection in Venture City and you are the only energy supplier among its companies. GreenGrid has a solar field, a battery bank, a strong buyer that takes power every tick, and real demand from companies that cannot run without energy. It also has the heaviest resource bill in the city and the largest loan repayment in the city, and nobody on the team who can manage money.",
+    "founder_letter": "Team,\n\nWe were two engineers with a drawing of a solar field. We applied for the city's grid connection licence expecting to lose. We won it, and it is still the only one in the city.\n\nThen we borrowed to build. The field works. The battery bank works. Eastgate takes our power every tick and has never complained. And at Tick 7 the Bank wants its 10,000 VB back.\n\nEvery block we sell eats the two things we have least of. We have engineers who can wire a substation in the dark and nobody who can read a loan agreement.\n\nDon't take orders you can't fill. But don't stop taking orders.\n\nThe founders",
+    "products_table": [
+      [
+        "",
+        "Energy supply block",
+        "Efficiency retrofit"
+      ],
+      [
+        "Buyer gets",
+        "10 Energy units",
+        "The buyer uses 4 fewer Energy units every tick for the rest of the run"
+      ],
+      [
+        "Uses per unit",
+        "1 Materials, 1 Infrastructure",
+        "2 Materials, 1 Infrastructure, plus 1 finished unit of panels and batteries"
+      ],
+      [
+        "Up to, per tick",
+        "5 (8 after the Grid Expansion)",
+        "1"
+      ],
+      [
+        "List / lowest price (VB)",
+        "120 / 100",
+        "650 / 450"
+      ],
+      [
+        "Sold to",
+        "Other companies; Enterprise and Government customer cards",
+        "Other companies; Enterprise and Government customer cards"
+      ],
+      [
+        "Licence",
+        "None",
+        "None"
+      ]
+    ],
+    "obligations_table": [
+      [
+        "Obligation",
+        "Terms"
+      ],
+      [
+        "Anchor customer",
+        "Eastgate Industrial Park: 2 energy blocks every tick at 650 VB each, Ticks 1 to 6 (7,800 VB). Then up for renewal at the Customer desk. It does not count as an offtake."
+      ],
+      [
+        "Supplier deal",
+        "Allied Materials Depot: Materials at 12 VB a unit (20% below normal), up to 20 a tick. Ends at Tick 4 unless you commit to 3 ticks at 20 units."
+      ],
+      [
+        "Loan",
+        "10,000 VB repayment to the Bank, due Tick 7: the largest in the city. A missed repayment makes you Distressed."
+      ],
+      [
+        "Your memorandum",
+        "With Ledgerly, the city's payments company: \"Payment processing for our customer receipts.\" A recorded need, not a contract."
+      ],
+      [
+        "Memoranda you hold",
+        "From StackHouse, the city's compute host: \"Energy for the server halls at contract price.\" From Voltway, the city's fleet operator: \"Energy to charge the van fleet each tick.\" Their needs, not contracts."
+      ]
+    ],
+    "leads_table": [
+      [
+        "Lead",
+        "What you know"
+      ],
+      [
+        "Eastport Cold Storage",
+        "A big customer at the Customer desk whose power bill has doubled. Budget 1,600 VB a tick for 5 ticks. It must have 20 Energy units a tick under contract, or a retrofit that cuts its use by 25%. A supply contract of 3 or more ticks would also count as an offtake."
+      ],
+      [
+        "A factory",
+        "Can make panels and battery units. Find out who. Every retrofit needs one."
+      ],
+      [
+        "A transport operator",
+        "Its depot sits on land with a grid connection point. As a charging site it would be worth far more to an energy business than to its owner."
+      ]
+    ],
+    "dependencies_table": [
+      [
+        "You need",
+        "Who might supply it",
+        "If nobody does"
+      ],
+      [
+        "Manufacturing: panels and batteries (critical)",
+        "A manufacturer, if one is in the city",
+        "The Supplier Market's outsourced assembly: 1,200 VB a batch plus 30 of your own Materials, delivered next tick"
+      ],
+      [
+        "Payments",
+        "Ledgerly, your memorandum partner, and maybe others",
+        "The Bank's merchant service, 3% of your receipts"
+      ],
+      [
+        "Analytics",
+        "An analytics company",
+        "A specialist from the Talent Exchange"
+      ]
+    ],
+    "objectives_table": [
+      [
+        "Layer",
+        "Target"
+      ],
+      [
+        "Survive",
+        "Never Distressed two ticks running; solvent at the freeze"
+      ],
+      [
+        "Revenue",
+        "18,000 VB of new revenue by the freeze, not counting the anchor's first six ticks"
+      ],
+      [
+        "Grow",
+        "Complete the Grid Expansion"
+      ],
+      [
+        "Public objective",
+        "Sign 2 offtake contracts and repay the Tick 7 loan on time"
+      ]
+    ],
+    "intel_facts_table": [
+      [
+        "",
+        ""
+      ],
+      [
+        "Inside fact",
+        "\"Our grid connection licence is the only one in the city; any new generator needs it or a deal with us.\""
+      ],
+      [
+        "Market fact",
+        "\"The Supplier Market sells finished goods, but at a premium and only in its minimum order size.\""
+      ],
+      [
+        "Rumour",
+        "\"Government is about to raise energy subsidies.\""
+      ],
+      [
+        "Overheard",
+        "\"A regulator at the Government desk asked how much of our retrofit margin depends on the subsidy.\""
+      ]
+    ],
+    "dossier_filename": "06 - GreenGrid - Founder Dossier.docx",
+    "dossier_url": "/dossiers/06 - GreenGrid - Founder Dossier.docx",
+    "dossier_slug_url": "/dossiers/comp_greengrid.docx",
+    "all_paragraphs": [
+      "VENTURE CITY \u00b7 FOUNDER DOSSIER",
+      "GreenGrid",
+      "Saturday 10 October 2026 \u00b7 For every founder and member of staff of GreenGrid",
+      "What your company knows at City Opens. New messages arrive in your company inbox during the day. Your live numbers are on the Company Station: if this dossier and the Station disagree, the Station is right.",
+      "At a glance",
+      "You hold the only grid connection in Venture City and you are the only energy supplier among its companies. GreenGrid has a solar field, a battery bank, a strong buyer that takes power every tick, and real demand from companies that cannot run without energy. It also has the heaviest resource bill in the city and the largest loan repayment in the city, and nobody on the team who can manage money.",
+      "A letter from the founders",
+      "Team,",
+      "We were two engineers with a drawing of a solar field. We applied for the city's grid connection licence expecting to lose. We won it, and it is still the only one in the city.",
+      "Then we borrowed to build. The field works. The battery bank works. Eastgate takes our power every tick and has never complained. And at Tick 7 the Bank wants its 10,000 VB back.",
+      "Every block we sell eats the two things we have least of. We have engineers who can wire a substation in the dark and nobody who can read a loan agreement.",
+      "Don't take orders you can't fill. But don't stop taking orders.",
+      "The founders",
+      "Who you are",
+      "Your team",
+      "Your CEO is a volunteer playing the Operator: systems beat heroics; won't take orders it can't fulfil; tends to avoid bold bets.",
+      "Your staff are strong in Operations: engineers and site crews who can tell you exactly what a block costs in materials. You are one person short in Finance / Capital: nobody can raise money or plan the Bank repayment. That empty seat costs 225 VB every tick until it is filled. Everyone starts at Level 0 on 100 VB per tick.",
+      "Before Market Open, elect two Authorised Signatories. Either can approve spending up to 5,000 VB; above that needs the CEO or both together. Pick people who will be around at Tick 4 and Tick 7.",
+      "Capital and resources",
+      "Figures assume a 9-person company; the platform sets your real numbers when registration closes. Your Company Station (the CEO volunteer's tablet) shows your live cash, stock, contracts, deadlines and people. Your Participant Portal (scan the QR on your badge) holds your wallet, offers and the deals you propose. There is no physical money: the platform is the record.",
+      "Products",
+      "The Grid Expansion. Once two offtake contracts are recorded by the Bank, its project finance offers up to 15,000 VB at 12% flat, repaid in one payment after 6 ticks, with the use of funds recorded and restricted. Drawing it lifts your block capacity from 5 to 8 a tick. An offtake is an energy supply contract of 3 or more ticks with any buyer, signed from Market Open onward; your anchor does not count.",
+      "What you start with: obligations",
+      "Customers and leads",
+      "Eastgate Industrial Park is your only steady income. Its tenants notice every flicker, and it has never had a reason to complain.",
+      "Open customer cards sit at the Customer desk. Ask what each customer must have, and listen for what they need but did not write down.",
+      "Who you need, and who needs you",
+      "Others need you for energy: StackHouse and Voltway hold memoranda with you, and other energy-heavy companies will ask. Retrofits suit anyone who would rather use less Energy for good. You are not the only seller in the city: the Bank sells Energy at 15 VB a unit and the Supplier Market at about 13.5. Your block works out at 12 a unit. Price above the fallback and buyers walk to the desk.",
+      "Immediate challenges",
+      "Bottleneck: Materials and Infrastructure. Every block you sell uses one more of each; every retrofit uses two Materials.",
+      "Weakness: nobody can raise or manage capital.",
+      "Known risks: the 10,000 VB repayment at Tick 7; your Materials deal ends at Tick 4; retrofits need panels and batteries you cannot make; your anchor renewal after Tick 6.",
+      "Objectives",
+      "Your CEO also holds a private objective in a sealed envelope, and each of you has a personal objective in your Portal.",
+      "Options on the table",
+      "Obvious: sign energy supply contracts of 3 or more ticks with energy-heavy companies; two of them open project finance.",
+      "Worth finding: a transport depot would make an ideal charging site; the Supplier Market's finished goods are a retrofit route while no factory is found.",
+      "Bigger moves: pivot from building generation to selling efficiency, which needs less capital; add EV charging for a fleet operator; spin out a charging unit or an efficiency consulting unit; merge with the fleet operator or the compute host (a green data centre); buy a manufacturer to own your supply.",
+      "What only you know",
+      "None of these is marked true or false. You may share, sell or trade them. Some people on your team may hold a sealed note the rest have not seen. Ask.",
+      "Rules that matter most",
+      "A company is Distressed if its cash is below zero after a tick, it misses a loan payment, it has fewer than 3 staff, or a High or Very High resource sits at 0 for 2 ticks. You then have 2 ticks to fix it.",
+      "Stock: a warning at 30 units; at 15, anything using that resource costs 25% more of it; at 0, deliveries stop.",
+      "Anyone may negotiate. A deal proposed in the Portal is real only when a signatory or the CEO accepts it.",
+      "Desks enter your purchases, loans, contracts and licences on the platform; check the Station afterwards.",
+      "Nothing settles before Tick 1. No outside internet or AI until the Internet Unlock at Tick 8.",
+      "Stuck on the platform? The helpdesk is open all day."
+    ]
+  },
+  {
+    "id": "comp_medilink",
+    "code": "MED",
+    "name": "MediLink",
+    "sector": "Health marketplace: telehealth and pharmacy",
+    "tagline": "A fee per consultation and pharmacy order; sales of anonymised outcome data once compliant.",
+    "description": "Started during a winter flu wave by a doctor and a software engineer. Patients loved it; the regulator noticed it was storing outcome data faster than it was securing it. Good care for everyone in the city, without a waiting room.",
+    "cluster": "Digital, Regulated",
+    "workforce_mix": "Tech-led",
+    "fills_slots": [
+      "S11"
+    ],
+    "critical_slot": "S8 Security",
+    "ceo_persona": "Risk Guardian",
+    "deficit_domain": "Brand / Community",
+    "hidden_lever": "Latent asset: dataset worth 2 to 3 times book to the S9 provider",
+    "vulnerability": "Hidden liability: data-breach fine if data sold without compliance",
+    "consumption": {
+      "compute": "High",
+      "energy": "Medium",
+      "logistics": "Medium",
+      "materials": "Medium",
+      "data": "Very High",
+      "infrastructure": "High"
+    },
+    "initial_cash": 30050,
+    "scarcest_resources": "Data, which runs out during Tick 7 if you buy none",
+    "deadlines": "Tick 4: your cheap Data deal ends. After Tick 6: your anchor customer comes up for renewal",
+    "cannot_do_alone": "Security cover and compliance: without it, your best asset stays on the shelf",
+    "gate_licence": "The health data compliance licence, from Government, opens regulated data buyers. Three verified deliveries open the hospital buyer",
+    "notable_asset": "Verified provider and patient-outcome dataset, book value 6,000 VB (it counts as Bank collateral)",
+    "at_a_glance": "Patients trust you and regulators do not. MediLink runs telehealth consultations and pharmacy orders for the whole city, and it holds the cleanest health dataset in Venture City. But the data was stored faster than it was secured, so you cannot sell it to regulated buyers, and the hospitals that would pay most will not sign until you prove you can deliver.",
+    "founder_letter": "Team,\n\nMediLink began in a winter flu wave. One of us is a doctor who could not see patients fast enough; the other wrote software. We put a doctor in people's pockets and medicine at their doors.\n\nWe also kept everything. Today that record is the cleanest health data in the city. The regulator noticed too: you are storing this faster than you are securing it. We did not have a good answer.\n\nPatients trust us. Hospitals and regulators do not, yet, and nobody here wins that trust for a living. You are inheriting a loved company with a locked door. The key is evidence.\n\nProve it first. Then sell it.\n\nThe founders",
+    "products_table": [
+      [
+        "",
+        "Consultation and pharmacy order",
+        "Verified health dataset"
+      ],
+      [
+        "Buyer gets",
+        "One telehealth consultation, with any pharmacy order prepared for delivery",
+        "5 Data units of verified quality"
+      ],
+      [
+        "Uses per unit",
+        "1 Data, 1 Compute",
+        "1 Compute, 2 Data"
+      ],
+      [
+        "Up to, per tick",
+        "4",
+        "2"
+      ],
+      [
+        "List / lowest price (VB)",
+        "500 / 380",
+        "105 / 90"
+      ],
+      [
+        "Sold to",
+        "Patient customer cards; hospital cards once you have 3 verified deliveries",
+        "Other companies; regulated buyers only with the compliance licence"
+      ],
+      [
+        "Licence",
+        "None",
+        "Regulated buyers need the health data compliance licence"
+      ]
+    ],
+    "obligations_table": [
+      [
+        "Obligation",
+        "Terms"
+      ],
+      [
+        "Anchor customer",
+        "CityCare Patients: 2 consultations every tick at 500 VB each, Ticks 1 to 6 (6,000 VB). Then up for renewal at the Customer desk."
+      ],
+      [
+        "Supplier deal",
+        "OpenData Exchange: Data at 22 VB a unit (12% below normal), up to 12 a tick. Ends at Tick 4 unless you commit to 3 ticks at 12 units."
+      ],
+      [
+        "Compliance gap",
+        "Your dataset cannot be sold to regulated buyers until Government grants the health data compliance licence. It costs you the sales you cannot make, not a payment."
+      ],
+      [
+        "Your memorandum",
+        "With TrustLayer, the city's security provider: \"Security cover and an attestation to close the data compliance gap.\" A recorded need, not a contract."
+      ]
+    ],
+    "leads_table": [
+      [
+        "Lead",
+        "What you know"
+      ],
+      [
+        "Northbridge Hospital Network",
+        "A big customer at the Customer desk whose discharged patients are being readmitted. Budget 3,000 VB a tick for 4 ticks. It will not sign without 3 verified deliveries to patient customers, and the compliance licence or an attestation."
+      ],
+      [
+        "An analytics business",
+        "Wants clean health data for its models. Find out who. Your public objective says you sell data only with security cover in place."
+      ],
+      [
+        "A security firm",
+        "Sells audits that regulators accept. Find out who, and what an audit would take."
+      ]
+    ],
+    "dependencies_table": [
+      [
+        "You need",
+        "Who might supply it",
+        "If nobody does"
+      ],
+      [
+        "Security and compliance (critical)",
+        "TrustLayer, your memorandum partner",
+        "Government's security compliance review: 20 Data units, a full system description and 1,500 VB, decided over 2 ticks"
+      ],
+      [
+        "Home delivery",
+        "A delivery company with a home-delivery service, if one is in the city",
+        "The Logistics Provider: standard delivery next tick, or immediate at 1.5 times the price"
+      ],
+      [
+        "Payments",
+        "A payments company",
+        "The Bank's merchant service, 3% of your receipts"
+      ],
+      [
+        "Analytics",
+        "An analytics company",
+        "A specialist from the Talent Exchange"
+      ]
+    ],
+    "objectives_table": [
+      [
+        "Layer",
+        "Target"
+      ],
+      [
+        "Survive",
+        "Never Distressed two ticks running; solvent at the freeze"
+      ],
+      [
+        "Revenue",
+        "18,000 VB of new revenue by the freeze, not counting the anchor's first six ticks"
+      ],
+      [
+        "Grow",
+        "Complete 3 verified deliveries and sign the hospital buyer"
+      ],
+      [
+        "Public objective",
+        "Clear the compliance gap, and sell data only with security cover in place"
+      ]
+    ],
+    "intel_facts_table": [
+      [
+        "",
+        ""
+      ],
+      [
+        "Inside fact",
+        "\"Our outcome data is the cleanest in the city; an analytics business could build a whole product on it.\""
+      ],
+      [
+        "Market fact",
+        "\"The city's security firm can audit us now, but its attestations only count once Government approves it as an auditor.\""
+      ],
+      [
+        "Rumour",
+        "\"Government plans to fine any health business that sells data this quarter.\""
+      ],
+      [
+        "Overheard",
+        "\"Our engineers found an old database backup on a shared drive and never traced who copied it.\""
+      ]
+    ],
+    "dossier_filename": "07 - MediLink - Founder Dossier.docx",
+    "dossier_url": "/dossiers/07 - MediLink - Founder Dossier.docx",
+    "dossier_slug_url": "/dossiers/comp_medilink.docx",
+    "all_paragraphs": [
+      "VENTURE CITY \u00b7 FOUNDER DOSSIER",
+      "MediLink",
+      "Saturday 10 October 2026 \u00b7 For every founder and member of staff of MediLink",
+      "What your company knows at City Opens. New messages arrive in your company inbox during the day. Your live numbers are on the Company Station: if this dossier and the Station disagree, the Station is right.",
+      "At a glance",
+      "Patients trust you and regulators do not. MediLink runs telehealth consultations and pharmacy orders for the whole city, and it holds the cleanest health dataset in Venture City. But the data was stored faster than it was secured, so you cannot sell it to regulated buyers, and the hospitals that would pay most will not sign until you prove you can deliver.",
+      "A letter from the founders",
+      "Team,",
+      "MediLink began in a winter flu wave. One of us is a doctor who could not see patients fast enough; the other wrote software. We put a doctor in people's pockets and medicine at their doors.",
+      "We also kept everything. Today that record is the cleanest health data in the city. The regulator noticed too: you are storing this faster than you are securing it. We did not have a good answer.",
+      "Patients trust us. Hospitals and regulators do not, yet, and nobody here wins that trust for a living. You are inheriting a loved company with a locked door. The key is evidence.",
+      "Prove it first. Then sell it.",
+      "The founders",
+      "Who you are",
+      "Your team",
+      "Your CEO is a volunteer playing the Risk Guardian: evidence before money; no credit without proof; tends to miss fast opportunities.",
+      "Your staff are strong in Tech: clinicians and engineers. You are one person short in Brand / Community: nobody earns the trust of patients, hospitals and regulators. That empty seat costs 225 VB every tick until it is filled. Everyone starts at Level 0 on 100 VB per tick.",
+      "Before Market Open, elect two Authorised Signatories. Either can approve spending up to 5,000 VB; above that needs the CEO or both together. Pick people who will be around at Tick 4.",
+      "Capital and resources",
+      "Figures assume a 9-person company; the platform sets your real numbers when registration closes. Your Company Station (the CEO volunteer's tablet) shows your live cash, stock, contracts, deadlines and people. Your Participant Portal (scan the QR on your badge) holds your wallet, offers and the deals you propose. There is no physical money: the platform is the record.",
+      "Products",
+      "Delivery is evidence. Pharmacy orders reach patients' homes through a home-delivery company or the Logistics Provider, not from your own stock. A delivery counts as verified only when it went through a recorded delivery contract and the Customer desk confirms it. Anchor orders count only when shipped that way. A delivery nobody recorded earns you a fee and nothing else.",
+      "What you start with: obligations",
+      "Customers and leads",
+      "CityCare Patients is your only steady income. Its members trust you, and several have asked whether their medicine will actually come to the door this time.",
+      "Open customer cards sit at the Customer desk. Ask what each customer must have, and listen for what they need but did not write down.",
+      "Who you need, and who needs you",
+      "Others need you for verified datasets: an analytics firm for its models and a security firm for its audits. Your data has two prices: to an unregulated buyer it is 5 verified units at 105 VB; to a buyer who needs it compliant, it cannot be sold at all until you hold the licence.",
+      "The licence itself needs security evidence and a data-handling policy, with an 800 VB fee, decided at the tick boundary after a complete application. Security evidence is either an attestation from an approved auditor or a pass in Government's review.",
+      "Immediate challenges",
+      "Bottleneck: Data. Every consultation uses one more unit and every dataset two.",
+      "Weakness: nobody builds trust with hospitals and regulators.",
+      "Known risks: the dataset is blocked for regulated buyers until licensed; the hospital is locked until 3 verified deliveries; your Data deal ends at Tick 4; your anchor renewal after Tick 6.",
+      "Objectives",
+      "Your CEO also holds a private objective in a sealed envelope, and each of you has a personal objective in your Portal.",
+      "Options on the table",
+      "Obvious: ship pharmacy orders through a recorded delivery contract to reach 3 verified deliveries; sell data to unregulated buyers.",
+      "Worth finding: an analytics business wants clean health data; the city's security firm could become an approved auditor.",
+      "Bigger moves: pivot from a care marketplace to a health data business; add chilled medicine delivery with a delivery partner, or a diagnostics model built on the dataset; spin out a diagnostics unit or a pharmacy delivery unit; merge with the analytics company (health AI) or the security company (compliant data). To an AI company, you may be the most valuable acquisition in the city.",
+      "What only you know",
+      "None of these is marked true or false. You may share, sell or trade them. Some people on your team may hold a sealed note the rest have not seen. Ask.",
+      "Rules that matter most",
+      "A company is Distressed if its cash is below zero after a tick, it misses a loan payment, it has fewer than 3 staff, or a High or Very High resource sits at 0 for 2 ticks. You then have 2 ticks to fix it.",
+      "Stock: a warning at 30 units; at 15, anything using that resource costs 25% more of it; at 0, deliveries stop.",
+      "Anyone may negotiate. A deal proposed in the Portal is real only when a signatory or the CEO accepts it.",
+      "Desks enter your purchases, loans, contracts and licences on the platform; check the Station afterwards.",
+      "Nothing settles before Tick 1. No outside internet or AI until the Internet Unlock at Tick 8.",
+      "Stuck on the platform? The helpdesk is open all day."
+    ]
+  },
+  {
+    "id": "comp_harvestloop",
+    "code": "HVL",
+    "name": "HarvestLoop",
+    "sector": "Agritech: farm-to-business supply",
+    "tagline": "Buys from the grower network and sells produce and bio-material batches to businesses; earns on volume and freshness.",
+    "description": "Built by a grower's daughter who organised forty small farms into one supply network. The farms trust her; buyers come and go, and the stock does not wait. Fair prices for growers and fresh supply for the city's businesses.",
+    "cluster": "Physical",
+    "workforce_mix": "Ops-led",
+    "fills_slots": [
+      "S6"
+    ],
+    "critical_slot": "S1 Fleet capacity",
+    "ceo_persona": "Mission Idealist",
+    "deficit_domain": "Research / Intelligence",
+    "hidden_lever": "Hidden buyer: an export-processor card appears with a fleet deal and certificate",
+    "vulnerability": "Fragile supply: stock spoils if fleet runs break",
+    "consumption": {
+      "compute": "Low",
+      "energy": "Medium",
+      "logistics": "High",
+      "materials": "Very High",
+      "data": "Medium",
+      "infrastructure": "Medium"
+    },
+    "initial_cash": 32550,
+    "scarcest_resources": "Materials, which runs out during Tick 7 if you buy none",
+    "deadlines": "Tick 3: 6,000 VB due to your seed supplier. Tick 4: your cheap Materials deal ends. After Tick 6: your anchor customer comes up for renewal",
+    "cannot_do_alone": "Vans and drivers: every batch you sell to a business travels in someone else's van",
+    "gate_licence": "The Food Safety Certificate, from Government, opens sales straight to households",
+    "notable_asset": "The grower collection network, book value 5,000 VB (it counts as Bank collateral)",
+    "at_a_glance": "You run the city's only produce and bio-materials supplier, and the stock does not wait. HarvestLoop gathers the harvest of forty small farms into one supply network. You have plenty to sell, little time to sell it, no vans of your own, and the earliest bill in the city. If your group founded this company as a new venture, read the last section first.",
+    "founder_letter": "Team,\n\nI grew up on one of the forty farms. I watched good growers sell to whoever turned up with a truck, at whatever price the truck offered. So I asked them, one farm at a time, to sell together. They said yes because they trusted me, not because I had a plan.\n\nWe know what is coming out of the ground before anyone else in the city. What we do not know is who will buy it, so every week we pick more than we sell. We have no vans, and we owe our seed supplier first.\n\nYou are inheriting forty families who said yes. Find out who wants what we grow, and get it to them before it spoils.\n\nThe founder",
+    "products_table": [
+      [
+        "",
+        "Produce or bio-material batch",
+        "Farm box"
+      ],
+      [
+        "Buyer gets",
+        "8 Materials units, as fresh produce or bio-material",
+        "A box of fresh produce delivered to a household"
+      ],
+      [
+        "Uses per unit",
+        "1 Materials, 1 Logistics",
+        "1 Materials, 1 Logistics"
+      ],
+      [
+        "Up to, per tick",
+        "6",
+        "3"
+      ],
+      [
+        "List / lowest price (VB)",
+        "95 / 70",
+        "400 / 300"
+      ],
+      [
+        "Sold to",
+        "Other companies; big food buyers",
+        "Household customer cards"
+      ],
+      [
+        "Licence",
+        "None",
+        "Food Safety Certificate"
+      ]
+    ],
+    "obligations_table": [
+      [
+        "Obligation",
+        "Terms"
+      ],
+      [
+        "Anchor customer",
+        "Central Kitchens Ltd: 2 produce batches every tick at 500 VB each, Ticks 1 to 6 (6,000 VB). Then up for renewal at the Customer desk."
+      ],
+      [
+        "Supplier deal",
+        "Riverbend Growers Co-op: Materials (seed, feed and crates) at 13 VB a unit, up to 15 a tick, paid a tick after delivery. Ends at Tick 4 unless you commit to 3 ticks at 15 units."
+      ],
+      [
+        "Bill",
+        "6,000 VB to Riverbend Growers Co-op for seed and fertiliser, due Tick 3: the earliest bill in the city. If unpaid, they stop supplying you."
+      ],
+      [
+        "Your memorandum",
+        "With the city's fleet operator, if one is in the city: \"Vans for perishable runs from the grower network.\" A recorded need, not a contract."
+      ],
+      [
+        "A memorandum you may hold",
+        "From a manufacturer, if one is in the city: \"Bio-material batches to keep the line running.\" Their need, not a contract."
+      ]
+    ],
+    "leads_table": [
+      [
+        "Lead",
+        "What you know"
+      ],
+      [
+        "Farm-Box Subscribers",
+        "A household customer at the Customer desk that wants weekly farm boxes for its members. It will not sign without the Food Safety Certificate, and the boxes still have to reach the door."
+      ],
+      [
+        "A factory",
+        "Needs bio-materials every tick to keep its line running. Find out who. A batch is exactly what it needs."
+      ],
+      [
+        "A fleet operator",
+        "Has vans standing idle. You need vans; it needs steady buyers."
+      ]
+    ],
+    "dependencies_table": [
+      [
+        "You need",
+        "Who might supply it",
+        "If nobody does"
+      ],
+      [
+        "Vans and drivers (critical)",
+        "The city's fleet operator, if one is in the city, and maybe others",
+        "The Logistics Provider: standard delivery next tick, or immediate at 1.5 times the price"
+      ],
+      [
+        "Payments",
+        "A payments company",
+        "The Bank's merchant service, 3% of your receipts"
+      ],
+      [
+        "Analytics",
+        "An analytics company",
+        "A specialist from the Talent Exchange"
+      ],
+      [
+        "Consumer audience and community",
+        "A consumer community, if one is in the city",
+        "The Media desk's consumer outlets"
+      ]
+    ],
+    "objectives_table": [
+      [
+        "Layer",
+        "Target"
+      ],
+      [
+        "Survive",
+        "Never Distressed two ticks running; solvent at the freeze"
+      ],
+      [
+        "Revenue",
+        "18,000 VB of new revenue by the freeze, not counting the anchor's first six ticks"
+      ],
+      [
+        "Grow",
+        "Hold the Food Safety Certificate and sell farm boxes to a household customer"
+      ],
+      [
+        "Public objective",
+        "Pay the Tick 3 bill on time and sell standing batches to 2 companies"
+      ]
+    ],
+    "intel_facts_table": [
+      [
+        "",
+        ""
+      ],
+      [
+        "Inside fact",
+        "\"We over-harvest every week because nobody forecasts demand, and half the surplus is wasted.\""
+      ],
+      [
+        "Market fact",
+        "\"The city's fleet operator has vans idle half the day and wants steady buyers.\""
+      ],
+      [
+        "Rumour",
+        "\"A big supermarket chain is about to sign up every grower in the region.\""
+      ],
+      [
+        "Overheard",
+        "\"Our growers say the reservoirs are lower than any year they remember.\""
+      ]
+    ],
+    "dossier_filename": "08 - HarvestLoop - Founder Dossier.docx",
+    "dossier_url": "/dossiers/08 - HarvestLoop - Founder Dossier.docx",
+    "dossier_slug_url": "/dossiers/comp_harvestloop.docx",
+    "all_paragraphs": [
+      "VENTURE CITY \u00b7 FOUNDER DOSSIER",
+      "HarvestLoop",
+      "Saturday 10 October 2026 \u00b7 For every founder and member of staff of HarvestLoop \u00b7 Reserve company: used only if it is in play",
+      "What your company knows at City Opens. New messages arrive in your company inbox during the day. Your live numbers are on the Company Station: if this dossier and the Station disagree, the Station is right.",
+      "At a glance",
+      "You run the city's only produce and bio-materials supplier, and the stock does not wait. HarvestLoop gathers the harvest of forty small farms into one supply network. You have plenty to sell, little time to sell it, no vans of your own, and the earliest bill in the city. If your group founded this company as a new venture, read the last section first.",
+      "A letter from the founders",
+      "Team,",
+      "I grew up on one of the forty farms. I watched good growers sell to whoever turned up with a truck, at whatever price the truck offered. So I asked them, one farm at a time, to sell together. They said yes because they trusted me, not because I had a plan.",
+      "We know what is coming out of the ground before anyone else in the city. What we do not know is who will buy it, so every week we pick more than we sell. We have no vans, and we owe our seed supplier first.",
+      "You are inheriting forty families who said yes. Find out who wants what we grow, and get it to them before it spoils.",
+      "The founder",
+      "Who you are",
+      "Your team",
+      "Your CEO is a volunteer playing the Mission Idealist: impact is the point; won't take \"dirty\" money; tends to ignore unit economics.",
+      "Your staff are strong in Operations: harvests, crates and collection routes. You are one person short in Research / Intelligence: nobody forecasts what the city will buy, so you harvest more than you sell. That empty seat costs 225 VB every tick until it is filled. Everyone starts at Level 0 on 100 VB per tick.",
+      "Before Market Open, elect two Authorised Signatories. Either can approve spending up to 5,000 VB; above that needs the CEO or both together. Pick people who will be around at Tick 3.",
+      "Capital and resources",
+      "Figures assume a 9-person company; the platform sets your real numbers when registration closes. Your Company Station (the CEO volunteer's tablet) shows your live cash, stock, contracts, deadlines and people. Your Participant Portal (scan the QR on your badge) holds your wallet, offers and the deals you propose. There is no physical money: the platform is the record.",
+      "Products",
+      "A batch works out at about 12 VB per Materials unit, against 13.5 at the Supplier Market and 15 at the Bank. Capacity you do not sell in a tick does not carry over: a batch you do not sell is simply gone.",
+      "What you start with: obligations",
+      "Customers and leads",
+      "Central Kitchens Ltd is your only steady income. Its kitchens plan the menu around what arrives, so a late batch is noticed.",
+      "Open customer cards sit at the Customer desk. Ask what each customer must have, and listen for what they need but did not write down.",
+      "Who you need, and who needs you",
+      "Others need you for produce and bio-materials: a manufacturer whose line stops without them, a consumer brand, and a delivery business. Your rival is also your customer: a consumer brand that might buy your produce waits in the same Food Safety queue as you, and Government makes only one inspection a tick.",
+      "Immediate challenges",
+      "Bottleneck: no vans of your own. Every batch to a business needs a van deal or the Logistics Provider.",
+      "Weakness: nobody forecasts demand.",
+      "Known risks: 6,000 VB due at Tick 3; your Materials deal ends at Tick 4; a shared certificate queue; your anchor renewal after Tick 6.",
+      "Objectives",
+      "Your CEO also holds a private objective in a sealed envelope, and each of you has a personal objective in your Portal.",
+      "Options on the table",
+      "Obvious: standing batch deals with a manufacturer and food businesses.",
+      "Worth finding: a fleet operator has idle vans; a merchant advance against produce contracts could fund the Tick 3 bill.",
+      "Bigger moves: go farm-to-door and sell straight to households; build a farm-yield data product for analytics or dataset buyers; spin out a cold-chain logistics unit; be bought by a consumer brand or a delivery company; merge with a manufacturer.",
+      "What only you know",
+      "None of these is marked true or false. You may share, sell or trade them. Some people on your team may hold a sealed note the rest have not seen. Ask.",
+      "Rules that matter most",
+      "A company is Distressed if its cash is below zero after a tick, it misses a loan payment, it has fewer than 3 staff, or a High or Very High resource sits at 0 for 2 ticks. You then have 2 ticks to fix it.",
+      "Stock: a warning at 30 units; at 15, anything using that resource costs 25% more of it; at 0, deliveries stop.",
+      "Anyone may negotiate. A deal proposed in the Portal is real only when a signatory or the CEO accepts it.",
+      "Desks enter your purchases, loans, contracts and licences on the platform; check the Station afterwards.",
+      "Nothing settles before Tick 1. No outside internet or AI until the Internet Unlock at Tick 8.",
+      "Stuck on the platform? The helpdesk is open all day.",
+      "If your group drew this company as a new venture",
+      "Once the GM opens the Founder Window, 3 or more people can found a company, with 10,000 VB committed between you from your wallets or resources and a founder agreement and resource agreement recorded. You drew HarvestLoop at random from the sealed companies and run it yourselves: there is no volunteer CEO. You must record a sale or a customer contract within 2 ticks, or HarvestLoop becomes Distressed. Each person can found only once, and only a few new companies can start in a day, first come first served.",
+      "Your GM's start sheet replaces the cash, resources, anchor, supplier deal and bill above, and some partners described here may not be in the city. Everything else, from the products to the certificate to what only you know, still describes your company."
+    ]
+  },
+  {
+    "id": "comp_stackhouse",
+    "code": "STH",
+    "name": "StackHouse",
+    "sector": "Cloud and data-centre hosting",
+    "tagline": "Sells compute capacity by the tick; profit depends on how full the halls are.",
+    "description": "Two infrastructure engineers bet that local businesses would rather rent compute nearby than from a distant giant. The halls were built on a loan that has been repaid; the tenants have been slower to arrive. Every business in the city runs on fast, local, affordable compute.",
+    "cluster": "Digital",
+    "workforce_mix": "Tech-led",
+    "fills_slots": [
+      "S3"
+    ],
+    "critical_slot": "S4 Energy",
+    "ceo_persona": "Dealmaker",
+    "deficit_domain": "Operations",
+    "hidden_lever": "Cost lever: an S4 deal drops Energy from Very High to High",
+    "vulnerability": "Key person: site reliability lead leaves at stated tick",
+    "consumption": {
+      "compute": "High",
+      "energy": "Very High",
+      "logistics": "Low",
+      "materials": "Low",
+      "data": "Medium",
+      "infrastructure": "Very High"
+    },
+    "initial_cash": 29550,
+    "scarcest_resources": "Energy and Infrastructure, which both run out during Tick 7 if you buy none",
+    "deadlines": "Tick 4: your cheap Energy deal ends. Tick 6: your target of 3 tenants at once. After Tick 6: your anchor customer comes up for renewal",
+    "cannot_do_alone": "Energy: the halls run on someone else's power",
+    "gate_licence": "The regulated hosting licence, from Government, opens regulated buyers. Three ticks of unbroken delivery open the big hosting buyer",
+    "notable_asset": "Server halls, book value 8,000 VB (they count as Bank collateral)",
+    "at_a_glance": "You own the only compute halls in Venture City, and half of them are empty. StackHouse is the city's own data centre: modern racks, an old cooling plant, and a promise of fast, local compute for every business in town. Two companies depend on you to stay alive. Meanwhile every empty hall still draws power, and the power is running out.",
+    "founder_letter": "Team,\n\nWe were two infrastructure engineers with a stubborn idea: that this city would rather rent compute from the building down the road than from a giant a thousand miles away. We borrowed to build the halls, and we paid every cent back.\n\nWe built for the city we expected, not the one that showed up. Half the halls hum for nobody, and the cooling plant drinks power like it is free.\n\nTwo companies here cannot run without us. That is a strong hand if you play it. Please do not sell a block for less than it costs to keep the lights on. And look after the people who keep the halls running. There are not enough of them.\n\nThe founders",
+    "products_table": [
+      [
+        "",
+        "Hosted compute block",
+        "Dedicated regulated server"
+      ],
+      [
+        "Buyer gets",
+        "10 Compute units",
+        "10 Compute units on a dedicated server that counts as compliant hosting in licence evidence"
+      ],
+      [
+        "Uses per unit",
+        "1 Energy, 1 Infrastructure",
+        "2 Energy, 1 Infrastructure"
+      ],
+      [
+        "Up to, per tick",
+        "6",
+        "2"
+      ],
+      [
+        "List / lowest price (VB)",
+        "160 / 130",
+        "300 / 230"
+      ],
+      [
+        "Sold to",
+        "Other companies; Enterprise customer cards",
+        "Regulated companies; Enterprise customer cards"
+      ],
+      [
+        "Licence",
+        "None",
+        "Regulated buyers need the hosting licence"
+      ]
+    ],
+    "obligations_table": [
+      [
+        "Obligation",
+        "Terms"
+      ],
+      [
+        "Anchor customer",
+        "Westbrook Media Group: 2 compute blocks every tick at 400 VB each, Ticks 1 to 6 (4,800 VB). Then up for renewal at the Customer desk. Delivering it in full counts toward your unbroken-delivery record."
+      ],
+      [
+        "Supplier deal",
+        "Metro Power: Energy at 12 VB a unit (20% below normal), up to 20 a tick. Ends at Tick 4 unless you commit to 3 ticks at 20 units."
+      ],
+      [
+        "Compliance gap",
+        "Your dedicated server cannot be sold to regulated buyers until Government grants the hosting licence. It costs you the sales you cannot make, not a payment."
+      ],
+      [
+        "Your memorandum",
+        "With GreenGrid, the city's energy supplier: \"Energy for the server halls at contract price.\" A recorded need, not a contract."
+      ],
+      [
+        "Memoranda you hold",
+        "From PulseAI, an analytics company: \"Hosted compute for model runs, below the market price.\" From TrustLayer, a security company: \"Hosted compute for the threat-detection engine.\" Their needs, not contracts."
+      ]
+    ],
+    "leads_table": [
+      [
+        "Lead",
+        "What you know"
+      ],
+      [
+        "Orbit Broadcasting",
+        "A big hosting customer at the Customer desk that wants several compute blocks every tick. It will not sign without 3 ticks of unbroken delivery on your record, and then wants a dedicated hosting product and a price."
+      ],
+      [
+        "An analytics business",
+        "Burns compute faster than anyone in the city. Find out who. Hosted compute is exactly what you sell."
+      ],
+      [
+        "A solar-and-battery firm",
+        "Sells energy by the tick below the market price. Find it before the other heavy users do."
+      ]
+    ],
+    "dependencies_table": [
+      [
+        "You need",
+        "Who might supply it",
+        "If nobody does"
+      ],
+      [
+        "Energy (critical)",
+        "GreenGrid, your memorandum partner, and maybe others",
+        "The Bank at 15 VB a unit, up to 30 a tick, or the Supplier Market at about 10% less, minimum order 20"
+      ],
+      [
+        "Payments",
+        "A payments company",
+        "The Bank's merchant service, 3% of your receipts"
+      ],
+      [
+        "Security",
+        "A security company",
+        "Government's security compliance review: 20 Data units, a full system description and 1,500 VB, decided over 2 ticks"
+      ]
+    ],
+    "objectives_table": [
+      [
+        "Layer",
+        "Target"
+      ],
+      [
+        "Survive",
+        "Never Distressed two ticks running; solvent at the freeze"
+      ],
+      [
+        "Revenue",
+        "18,000 VB of new revenue by the freeze, not counting the anchor's first six ticks"
+      ],
+      [
+        "Grow",
+        "Reach 3 ticks of unbroken delivery and sign the big hosting buyer"
+      ],
+      [
+        "Public objective",
+        "Host 3 tenants at once by Tick 6"
+      ]
+    ],
+    "intel_facts_table": [
+      [
+        "",
+        ""
+      ],
+      [
+        "Inside fact",
+        "\"Half our halls are empty, and every empty hall still draws power.\""
+      ],
+      [
+        "Market fact",
+        "\"The city's energy company has a big loan repayment coming and needs contracts it can show its Bank.\""
+      ],
+      [
+        "Rumour",
+        "\"A national cloud giant is opening a data centre in the city next quarter.\""
+      ],
+      [
+        "Overheard",
+        "\"Our site reliability lead has turned down two promotions and keeps mentioning burnout.\""
+      ]
+    ],
+    "dossier_filename": "09 - StackHouse - Founder Dossier.docx",
+    "dossier_url": "/dossiers/09 - StackHouse - Founder Dossier.docx",
+    "dossier_slug_url": "/dossiers/comp_stackhouse.docx",
+    "all_paragraphs": [
+      "VENTURE CITY \u00b7 FOUNDER DOSSIER",
+      "StackHouse",
+      "Saturday 10 October 2026 \u00b7 For every founder and member of staff of StackHouse",
+      "What your company knows at City Opens. New messages arrive in your company inbox during the day. Your live numbers are on the Company Station: if this dossier and the Station disagree, the Station is right.",
+      "At a glance",
+      "You own the only compute halls in Venture City, and half of them are empty. StackHouse is the city's own data centre: modern racks, an old cooling plant, and a promise of fast, local compute for every business in town. Two companies depend on you to stay alive. Meanwhile every empty hall still draws power, and the power is running out.",
+      "A letter from the founders",
+      "Team,",
+      "We were two infrastructure engineers with a stubborn idea: that this city would rather rent compute from the building down the road than from a giant a thousand miles away. We borrowed to build the halls, and we paid every cent back.",
+      "We built for the city we expected, not the one that showed up. Half the halls hum for nobody, and the cooling plant drinks power like it is free.",
+      "Two companies here cannot run without us. That is a strong hand if you play it. Please do not sell a block for less than it costs to keep the lights on. And look after the people who keep the halls running. There are not enough of them.",
+      "The founders",
+      "Who you are",
+      "Your team",
+      "Your CEO is a volunteer playing the Dealmaker: every problem is a deal; won't walk away from a table; tends to overcommit.",
+      "Your staff are strong in Tech: everyone can rack a server. You are one person short in Operations: too few people to run the halls, and they are covering nights between them. That empty seat costs 225 VB every tick until it is filled. Everyone starts at Level 0 on 100 VB per tick.",
+      "Before Market Open, elect two Authorised Signatories. Either can approve spending up to 5,000 VB; above that needs the CEO or both together. Pick people who will be around at Tick 4.",
+      "Capital and resources",
+      "Figures assume a 9-person company; the platform sets your real numbers when registration closes. Your Company Station (the CEO volunteer's tablet) shows your live cash, stock, contracts, deadlines and people. Your Participant Portal (scan the QR on your badge) holds your wallet, offers and the deals you propose. There is no physical money: the platform is the record.",
+      "You use little Logistics and Materials, so you have some to sell.",
+      "Products",
+      "A block works out at 16 VB per Compute unit, against 18 at the Supplier Market and 20 at the Bank. No institution sells compliant hosting.",
+      "What you start with: obligations",
+      "Customers and leads",
+      "Westbrook Media Group is your only steady income. It chose you because you are down the road and have never dropped it.",
+      "Open customer cards sit at the Customer desk. Ask what each customer must have, and listen for what they need but did not write down.",
+      "Who you need, and who needs you",
+      "Others need you for compute hosting: PulseAI and TrustLayer hold memoranda with you, and a payments company or a training business may ask too. You are the only host, but not the only big Energy buyer. Two other companies use Energy as heavily as you do; whoever signs the city's power first may not leave much for the rest.",
+      "The hosting licence needs security evidence, 20 Infrastructure units for hardening and an 800 VB fee, decided one tick after a complete application.",
+      "Immediate challenges",
+      "Bottleneck: Energy and Infrastructure. Empty halls still draw them, and every block you sell uses one more of each.",
+      "Weakness: too few people to run the halls.",
+      "Known risks: regulated tenants blocked until the hosting licence; discounting to fill halls below your own energy cost; your Energy deal ends at Tick 4; your anchor renewal after Tick 6.",
+      "Objectives",
+      "Your CEO also holds a private objective in a sealed envelope, and each of you has a personal objective in your Portal.",
+      "Options on the table",
+      "Obvious: host the compute-hungry companies; clean delivery to the anchor starts your unbroken-delivery count.",
+      "Worth finding: the energy company needs contracts to show its Bank, so it may sell cheap.",
+      "Bigger moves: pivot from raw capacity to managed hosting bundled with security; add edge hosting for physical companies; spin out a managed-security unit or an edge-hosting unit; merge with the analytics company (an AI cloud) or the energy company (a green data centre); buy the payments company as a captive tenant.",
+      "What only you know",
+      "None of these is marked true or false. You may share, sell or trade them. Some people on your team may hold a sealed note the rest have not seen. Ask.",
+      "Rules that matter most",
+      "A company is Distressed if its cash is below zero after a tick, it misses a loan payment, it has fewer than 3 staff, or a High or Very High resource sits at 0 for 2 ticks. You then have 2 ticks to fix it.",
+      "Stock: a warning at 30 units; at 15, anything using that resource costs 25% more of it; at 0, deliveries stop.",
+      "Anyone may negotiate. A deal proposed in the Portal is real only when a signatory or the CEO accepts it.",
+      "Desks enter your purchases, loans, contracts and licences on the platform; check the Station afterwards.",
+      "Nothing settles before Tick 1. No outside internet or AI until the Internet Unlock at Tick 8.",
+      "Stuck on the platform? The helpdesk is open all day."
+    ]
+  },
+  {
+    "id": "comp_voltway",
+    "code": "VLT",
+    "name": "Voltway",
+    "sector": "Electric fleet capacity and commercial mobility",
+    "tagline": "Sells compute capacity by the tick; profit depends on how full the halls are.",
+    "description": "Started with five electric delivery vans and grew to the city's largest commercial fleet, renting vans with drivers by the tick. Every business in the city runs on fast, local, affordable compute.",
+    "cluster": "Physical",
+    "workforce_mix": "Ops-led",
+    "fills_slots": [
+      "S1"
+    ],
+    "critical_slot": "S4 Energy",
+    "ceo_persona": "Growth Maximiser",
+    "deficit_domain": "Research / Intelligence",
+    "hidden_lever": "Latent asset: depot land worth 2 to 3 times book to the S4 provider (GreenGrid)",
+    "vulnerability": "Regulatory exposure: road rule change suspends consumer rides",
+    "consumption": {
+      "compute": "Medium",
+      "energy": "Very High",
+      "logistics": "High",
+      "materials": "Medium",
+      "data": "Medium",
+      "infrastructure": "Medium"
+    },
+    "initial_cash": 32500,
+    "scarcest_resources": "Energy (Very High) and Logistics (High); Energy runs out during Tick 7 if you buy none",
+    "deadlines": "Tick 6: 8,000 VB vehicle loan due to the Bank; after Tick 6: anchor freight customer comes up for renewal",
+    "cannot_do_alone": "Energy: your fleet runs on electricity from GreenGrid (critical dependency S4)",
+    "gate_licence": "Transport Operating Permit, from Government (opens Consumer rides)",
+    "notable_asset": "Electric van fleet, book value 8,000 VB (counts as Bank collateral)",
+    "at_a_glance": "You run the largest electric commercial van fleet in Venture City, and half the fleet sits idle in the afternoon. Voltway rents electric vans with drivers by the tick to businesses, and runs consumer passenger rides once licensed. Two companies depend on your fleet to survive. Meanwhile, your fleet drinks power from the grid, and energy is running short.",
+    "founder_letter": "Team,\n\nWe were two fleet dispatchers with a clear conviction: that the city would rather rent commercial delivery runs by the tick than buy depreciating metal and hire permanent drivers. We borrowed from the Bank to buy the van fleet, and we built the city's largest electric delivery operation.\n\nCommercial deliveries peak in the morning and evening, leaving vans parked idle half the day. Meanwhile the batteries drink power from GreenGrid, and our power bills are climbing.\n\nTwo companies cannot ship without us. Sell spare capacity by the tick to HarvestLoop and Forgeline, secure the Transport Operating Permit from Government to launch consumer rides, and watch the energy meters. Please do not miss our vehicle loan repayment at Tick 6.\n\nThe founders",
+    "products_table": [
+      [
+        "",
+        "Fleet capacity block",
+        "Consumer ride"
+      ],
+      [
+        "Buyer gets",
+        "Vans and drivers for scheduled delivery runs (fills S1)",
+        "Passenger transit ride across city zones"
+      ],
+      [
+        "Uses per unit",
+        "2 Energy, 1 Logistics",
+        "1 Energy, 1 Logistics"
+      ],
+      [
+        "Up to, per tick",
+        "10 units of delivery capacity per tick",
+        "5 rides per tick"
+      ],
+      [
+        "List / lowest price (VB)",
+        "350 VB per block",
+        "80 VB per ride"
+      ],
+      [
+        "Sold to",
+        "250 VB",
+        "50 VB"
+      ],
+      [
+        "Licence",
+        "None (available immediately)",
+        "Transport Operating Permit (Government)"
+      ]
+    ],
+    "obligations_table": [
+      [
+        "Obligation",
+        "Terms"
+      ],
+      [
+        "Anchor customer",
+        "Apex Freight Logistics: 2 fleet blocks every tick at 350 VB each, Ticks 1 to 6 (4,200 VB total). Then up for renewal at the Customer desk."
+      ],
+      [
+        "Supplier deal",
+        "Bank vehicle loan: 8,000 VB principal due at Tick 6. If missed, 10% penalty and credit grade drops."
+      ],
+      [
+        "Compliance gap",
+        "Metro Power charging contract: 15 Energy units per tick at 12 VB/unit. Ends at Tick 4 unless renewed."
+      ],
+      [
+        "Your memorandum",
+        "With GreenGrid, the city's energy supplier: \"Energy for the server halls at contract price.\" A recorded need, not a contract."
+      ],
+      [
+        "Memoranda you hold",
+        "From PulseAI, an analytics company: \"Hosted compute for model runs, below the market price.\" From TrustLayer, a security company: \"Hosted compute for the threat-detection engine.\" Their needs, not contracts."
+      ]
+    ],
+    "leads_table": [
+      [
+        "Lead",
+        "What you know"
+      ],
+      [
+        "Orbit Broadcasting",
+        "HarvestLoop and Forgeline need fleet capacity to move produce and factory freight. Sell them per-tick van blocks."
+      ],
+      [
+        "An analytics business",
+        "City Department of Commerce: holds the Transport Operating Permit. An application opens consumer ride bookings."
+      ],
+      [
+        "A solar-and-battery firm",
+        "Sells energy by the tick below the market price. Find it before the other heavy users do."
+      ]
+    ],
+    "dependencies_table": [
+      [
+        "You need",
+        "Who might supply it",
+        "If nobody does"
+      ],
+      [
+        "Energy (critical)",
+        "GreenGrid, your memorandum partner",
+        "The Bank at 15 VB a unit, up to 30 a tick, or Supplier Market at 10% less"
+      ],
+      [
+        "Analytics (S9)",
+        "PulseAI (for route optimisation)",
+        "Talent Exchange specialist"
+      ],
+      [
+        "Security",
+        "A security company",
+        "Government's security compliance review: 20 Data units, a full system description and 1,500 VB, decided over 2 ticks"
+      ]
+    ],
+    "objectives_table": [
+      [
+        "Layer",
+        "Target"
+      ],
+      [
+        "Survive",
+        "Never Distressed two ticks running; repay vehicle loan; solvent at freeze"
+      ],
+      [
+        "Revenue",
+        "20,000 VB of new fleet revenue by the freeze, not counting the anchor contract"
+      ],
+      [
+        "Grow",
+        "Reach 3 ticks of unbroken delivery and sign the big hosting buyer"
+      ],
+      [
+        "Public objective",
+        "Host 3 tenants at once by Tick 6"
+      ]
+    ],
+    "intel_facts_table": [
+      [
+        "",
+        ""
+      ],
+      [
+        "Inside fact",
+        "\"Our fleet depot land is situated right on a high-voltage conduit, worth 2 to 3 times book to GreenGrid as an EV supercharging station.\""
+      ],
+      [
+        "Market fact",
+        "\"GreenGrid is desperate for charging real-estate to expand capacity before mid-game.\""
+      ],
+      [
+        "Rumour",
+        "\"A municipal road rule review is pending at Tick 7; if city transit bylaws tighten, unlicensed consumer rides get shut down immediately.\""
+      ],
+      [
+        "Overheard",
+        "\"Our site reliability lead has turned down two promotions and keeps mentioning burnout.\""
+      ]
+    ],
+    "dossier_filename": "10 - Voltway - Founder Dossier.docx",
+    "dossier_url": "/dossiers/10 - Voltway - Founder Dossier.docx",
+    "dossier_slug_url": "/dossiers/comp_voltway.docx",
+    "all_paragraphs": [
+      "VENTURE CITY \u00b7 FOUNDER DOSSIER",
+      "Voltway",
+      "Saturday 24 October 2026 \u00b7 For every founder and member of staff of Voltway",
+      "What your company knows at City Opens. New messages arrive in your company inbox during the day. Your live numbers are on the Company Station: if this dossier and the Station disagree, the Station is right.",
+      "At a glance",
+      "You run the largest electric commercial van fleet in Venture City, and half the fleet sits idle in the afternoon. Voltway rents electric vans with drivers by the tick to businesses, and runs consumer passenger rides once licensed. Two companies depend on your fleet to survive. Meanwhile, your fleet drinks power from the grid, and energy is running short.",
+      "A letter from the founders",
+      "Team,",
+      "We were two fleet dispatchers with a clear conviction: that the city would rather rent commercial delivery runs by the tick than buy depreciating metal and hire permanent drivers. We borrowed from the Bank to buy the van fleet, and we built the city's largest electric delivery operation.",
+      "Commercial deliveries peak in the morning and evening, leaving vans parked idle half the day. Meanwhile the batteries drink power from GreenGrid, and our power bills are climbing.",
+      "Two companies cannot ship without us. Sell spare capacity by the tick to HarvestLoop and Forgeline, secure the Transport Operating Permit from Government to launch consumer rides, and watch the energy meters. Please do not miss our vehicle loan repayment at Tick 6.",
+      "The founders",
+      "Who you are",
+      "Your team",
+      "Your CEO is a volunteer playing the Growth Maximiser: customers first, profit later; won't cut acquisition spend; overspends on growth.",
+      "Your staff are strong in Operations: you know routes and dispatch. You are one person short in Research / Intelligence: no demand forecasting, so vans sit idle. That empty seat costs 225 VB every tick until it is filled. Everyone starts at Level 0 on 100 VB per tick.",
+      "Before Market Open, elect two Authorised Signatories. Either can approve spending up to 5,000 VB; above that needs the CEO or both together. Pick people who will be around at Tick 4.",
+      "Capital and resources",
+      "Figures assume a 9-person company; the platform sets your real numbers when registration closes. Your Company Station (the CEO volunteer's tablet) shows your live cash, stock, contracts, deadlines and people. Your Participant Portal (scan the QR on your badge) holds your wallet, offers and the deals you propose. There is no physical money: the platform is the record.",
+      "You use little Logistics and Materials, so you have some to sell.",
+      "Products",
+      "A block works out at 16 VB per Compute unit, against 18 at the Supplier Market and 20 at the Bank. No institution sells compliant hosting.",
+      "What you start with: obligations",
+      "Customers and leads",
+      "Westbrook Media Group is your only steady income. It chose you because you are down the road and have never dropped it.",
+      "Open customer cards sit at the Customer desk. Ask what each customer must have, and listen for what they need but did not write down.",
+      "Who you need, and who needs you",
+      "Others need you for compute hosting: PulseAI and TrustLayer hold memoranda with you, and a payments company or a training business may ask too. You are the only host, but not the only big Energy buyer. Two other companies use Energy as heavily as you do; whoever signs the city's power first may not leave much for the rest.",
+      "The hosting licence needs security evidence, 20 Infrastructure units for hardening and an 800 VB fee, decided one tick after a complete application.",
+      "Immediate challenges",
+      "Bottleneck: Energy and Infrastructure. Empty halls still draw them, and every block you sell uses one more of each.",
+      "Weakness: too few people to run the halls.",
+      "Known risks: regulated tenants blocked until the hosting licence; discounting to fill halls below your own energy cost; your Energy deal ends at Tick 4; your anchor renewal after Tick 6.",
+      "Objectives",
+      "Your CEO also holds a private objective in a sealed envelope, and each of you has a personal objective in your Portal.",
+      "Options on the table",
+      "Obvious: host the compute-hungry companies; clean delivery to the anchor starts your unbroken-delivery count.",
+      "Worth finding: the energy company needs contracts to show its Bank, so it may sell cheap.",
+      "Bigger moves: pivot from raw capacity to managed hosting bundled with security; add edge hosting for physical companies; spin out a managed-security unit or an edge-hosting unit; merge with the analytics company (an AI cloud) or the energy company (a green data centre); buy the payments company as a captive tenant.",
+      "What only you know",
+      "None of these is marked true or false. You may share, sell or trade them. Some people on your team may hold a sealed note the rest have not seen. Ask.",
+      "Rules that matter most",
+      "A company is Distressed if its cash is below zero after a tick, it misses a loan payment, it has fewer than 3 staff, or a High or Very High resource sits at 0 for 2 ticks. You then have 2 ticks to fix it.",
+      "Stock: a warning at 30 units; at 15, anything using that resource costs 25% more of it; at 0, deliveries stop.",
+      "Anyone may negotiate. A deal proposed in the Portal is real only when a signatory or the CEO accepts it.",
+      "Desks enter your purchases, loans, contracts and licences on the platform; check the Station afterwards.",
+      "Nothing settles before Tick 1. No outside internet or AI until the Internet Unlock at Tick 8.",
+      "Stuck on the platform? The helpdesk is open all day."
+    ]
+  },
+  {
+    "id": "comp_forgeline",
+    "code": "FRG",
+    "name": "Forgeline",
+    "sector": "Contract manufacturing",
+    "tagline": "Make other companies' products by the run; you need steady volume to cover the fixed cost of the line.",
+    "description": "Took over an old factory when its previous owner left the city. The line works, the machines are old, and the two engineers who could retool it left. People here like checklists and distrust big bets. Bring making back to the city, so local businesses do not ship their ideas away to be built.",
+    "cluster": "Physical",
+    "workforce_mix": "Ops-led",
+    "fills_slots": [
+      "S5"
+    ],
+    "critical_slot": "S6 Raw materials",
+    "ceo_persona": "Operator",
+    "deficit_domain": "Product / Build",
+    "hidden_lever": "Multiplier: contracts with other companies pay a stated premium",
+    "vulnerability": "Concentration: idle factory if anchor customer leaves",
+    "consumption": {
+      "compute": "Low",
+      "energy": "High",
+      "logistics": "Medium",
+      "materials": "Very High",
+      "data": "Low",
+      "infrastructure": "Medium"
+    },
+    "initial_cash": 28050,
+    "scarcest_resources": "Materials, which runs out during Tick 7 if you buy none (Energy follows during Tick 8)",
+    "deadlines": "Tick 4: your cheap Materials deal ends unless renewed, and your public target is 2 company manufacturing contracts by then. After Tick 6: your anchor customer comes up for renewal",
+    "cannot_do_alone": "Raw materials: a factory with no materials is a building",
+    "gate_licence": "A first batch that passes inspection at the Customer desk",
+    "notable_asset": "The factory line, book value 7,500 VB (it counts as Bank collateral)",
+    "at_a_glance": "You run an idle factory with one customer. Forgeline is the only manufacturer among the companies, two companies say they cannot make their products without you, and your line runs at a third of what it can do. The machines are old, they eat Energy whether they work or not, and the order book has one name in it. If your group drew Forgeline as a new venture, read the last section first.",
+    "founder_letter": "Team,\n\nWhen the old owner left the city, the factory was going to be sold for scrap. We bought it instead, mostly out of stubbornness. The line still works. The machines are older than some of you, and they hum all day whether we use them or not.\n\nWe can make things here, inside a tick, at a fair price. We have proved it to exactly one customer. One customer is not a business. It is a favour waiting to end.\n\nSystems beat heroics. Build the system: steady orders, steady materials, a line that never stands still.\n\nThe founders",
+    "products_table": [
+      [
+        "",
+        "Manufacturing run",
+        "Spare line time"
+      ],
+      [
+        "Buyer gets",
+        "4 finished product units, made within the tick",
+        "1 tick of line time: a prototype or a small batch of 2 finished units"
+      ],
+      [
+        "Uses per unit",
+        "2 Materials, 1 Energy (30 VB off the price if the buyer supplies the 2 Materials)",
+        "1 Materials, 1 Energy"
+      ],
+      [
+        "Up to, per tick",
+        "3",
+        "2"
+      ],
+      [
+        "List / lowest price (VB)",
+        "260 / 200",
+        "150 / 110"
+      ],
+      [
+        "Sold to",
+        "Other companies; large bulk-order customers once you pass inspection",
+        "Other companies, including new ventures"
+      ],
+      [
+        "Licence",
+        "None",
+        "None"
+      ]
+    ],
+    "obligations_table": [
+      [
+        "Obligation",
+        "Terms"
+      ],
+      [
+        "Anchor customer",
+        "Homeware Direct: 1 manufacturing run every tick at 1,100 VB, Ticks 1 to 6 (6,600 VB). Then up for renewal at the Customer desk."
+      ],
+      [
+        "Supplier deal",
+        "Allied Materials Depot: Materials at 13 VB a unit (about 13% below normal), up to 18 a tick. Ends at Tick 4 unless you commit to 3 ticks at 18 units."
+      ],
+      [
+        "Technical debt",
+        "The old machines burn 3 extra Energy every tick until someone fixes them, through a fix mission or a fix bought from another company."
+      ],
+      [
+        "Your memorandum",
+        "With the city's produce supplier, if one is in the city: \"Bio-material batches to keep the line running.\" A recorded need, not a contract."
+      ],
+      [
+        "Memoranda you may hold",
+        "From a consumer brand: \"Manufacturing runs for our product boxes, every tick from Tick 1.\" From an energy company: \"Panels and battery units made for the grid build-out.\" Their needs, not contracts."
+      ]
+    ],
+    "leads_table": [
+      [
+        "Lead",
+        "What you know"
+      ],
+      [
+        "Brightline Appliances",
+        "A big customer at the Customer desk that wants a second source for battery housings, every tick, with a published budget of 2,800 VB a tick for 4 ticks. It will not sign until you pass inspection and have Materials secured for 4 ticks under a supply contract."
+      ],
+      [
+        "A consumer brand",
+        "Has orders and no factory. Find out who."
+      ],
+      [
+        "A grower network",
+        "Sells bio-materials by the batch and wants a buyer who takes every tick."
+      ]
+    ],
+    "dependencies_table": [
+      [
+        "You need",
+        "Who might supply it",
+        "If nobody does"
+      ],
+      [
+        "Raw materials (critical)",
+        "A produce supplier or grower network, if one is in the city",
+        "The Supplier Market (Allied lists at 13.5 VB); the Bank at 15 VB a unit"
+      ],
+      [
+        "Vans and drivers",
+        "A fleet operator or a delivery business",
+        "The Logistics Provider: standard delivery next tick, or immediate at 1.5 times the price"
+      ],
+      [
+        "Energy",
+        "An energy company",
+        "The Supplier Market, or the Bank at 15 VB a unit"
+      ]
+    ],
+    "objectives_table": [
+      [
+        "Layer",
+        "Target"
+      ],
+      [
+        "Survive",
+        "Never Distressed two ticks running; solvent at the freeze"
+      ],
+      [
+        "Revenue",
+        "18,000 VB of new revenue by the freeze, not counting the anchor's first six ticks"
+      ],
+      [
+        "Grow",
+        "Pass inspection and sign a large bulk order"
+      ],
+      [
+        "Public objective",
+        "Sign 2 company manufacturing contracts by Tick 4"
+      ]
+    ],
+    "intel_facts_table": [
+      [
+        "",
+        ""
+      ],
+      [
+        "Inside fact",
+        "\"Our line runs at a third of its capacity, and the machines cost the same to keep warm either way.\""
+      ],
+      [
+        "Market fact",
+        "\"The city's produce supplier over-harvests and has more bio-material than buyers.\""
+      ],
+      [
+        "Rumour",
+        "\"An overseas factory is undercutting every contract manufacturer in the region.\""
+      ],
+      [
+        "Overheard",
+        "\"Our anchor's buyer keeps asking whether we have any other clients, as if checking we'll survive.\""
+      ]
+    ],
+    "dossier_filename": "11 - Forgeline - Founder Dossier.docx",
+    "dossier_url": "/dossiers/11 - Forgeline - Founder Dossier.docx",
+    "dossier_slug_url": "/dossiers/comp_forgeline.docx",
+    "all_paragraphs": [
+      "VENTURE CITY \u00b7 FOUNDER DOSSIER",
+      "Forgeline",
+      "Saturday 10 October 2026 \u00b7 For every founder and member of staff of Forgeline \u00b7 Reserve company: used only if it is in play",
+      "What your company knows at City Opens. New messages arrive in your company inbox during the day. Your live numbers are on the Company Station: if this dossier and the Station disagree, the Station is right.",
+      "At a glance",
+      "You run an idle factory with one customer. Forgeline is the only manufacturer among the companies, two companies say they cannot make their products without you, and your line runs at a third of what it can do. The machines are old, they eat Energy whether they work or not, and the order book has one name in it. If your group drew Forgeline as a new venture, read the last section first.",
+      "A letter from the founders",
+      "Team,",
+      "When the old owner left the city, the factory was going to be sold for scrap. We bought it instead, mostly out of stubbornness. The line still works. The machines are older than some of you, and they hum all day whether we use them or not.",
+      "We can make things here, inside a tick, at a fair price. We have proved it to exactly one customer. One customer is not a business. It is a favour waiting to end.",
+      "Systems beat heroics. Build the system: steady orders, steady materials, a line that never stands still.",
+      "The founders",
+      "Who you are",
+      "Your team",
+      "Your CEO is a volunteer playing the Operator: systems beat heroics; won't take orders the line can't fulfil; tends to avoid bold bets.",
+      "Your staff are strong in Operations: skilled line operators. You are one person short in Product / Build: nobody can adapt the line to a new product. That empty seat costs 225 VB every tick until it is filled. Everyone starts at Level 0 on 100 VB per tick.",
+      "Before Market Open, elect two Authorised Signatories. Either can approve spending up to 5,000 VB; above that needs the CEO or both together. Pick people who will be around at Tick 4.",
+      "Capital and resources",
+      "Figures assume a 9-person company; the platform sets your real numbers when registration closes. Your Company Station (the CEO volunteer's tablet) shows your live cash, stock, contracts, deadlines and people. Your Participant Portal (scan the QR on your badge) holds your wallet, offers and the deals you propose. There is no physical money: the platform is the record.",
+      "Products",
+      "A buyer without you pays an outside assembler 1,200 VB a batch plus 30 of its own Materials, and waits a tick. That is your sales pitch in one line.",
+      "What you start with: obligations",
+      "Customers and leads",
+      "Homeware Direct is your only steady income. It plans its shelves around your deliveries, so on time matters more to it than anything else.",
+      "Open customer cards sit at the Customer desk. Ask what each customer must have, and listen for what they need but did not write down.",
+      "Who you need, and who needs you",
+      "Others need you for manufacturing: a consumer brand and an energy company both say they cannot do without it, and new ventures need prototypes. That is leverage, and it is also exposure: if your line stops, they fall back to slower, dearer options. Decide early how hard you press them on price.",
+      "Immediate challenges",
+      "Bottleneck: Materials. Every run spends two more.",
+      "Weakness: no engineers to adapt the line.",
+      "Known risks: one customer, so losing it halves the order book; the old machines burn 3 extra Energy every tick; your Materials deal ends at Tick 4.",
+      "Objectives",
+      "Your CEO also holds a private objective in a sealed envelope, and each of you has a personal objective in your Portal.",
+      "Options on the table",
+      "Obvious: sell runs to businesses that cannot make their own products; sell spare line time to anyone, since it is the easiest yes in the building.",
+      "Worth finding: the produce supplier may have more bio-material than buyers; your first run for a new buyer is also your inspection batch.",
+      "Bigger moves: become a prototyping studio for the city's new ventures; launch an own-brand product line; be bought by a company that depends on you; merge with a produce supplier, from materials to finished goods.",
+      "What only you know",
+      "You also see what everyone plans to make before it reaches the market. None of these is marked true or false. You may share, sell or trade them. Some people on your team may hold a sealed note the rest have not seen. Ask.",
+      "Rules that matter most",
+      "A company is Distressed if its cash is below zero after a tick, it misses a loan payment, it has fewer than 3 staff, or a High or Very High resource sits at 0 for 2 ticks. You then have 2 ticks to fix it.",
+      "Stock: a warning at 30 units; at 15, anything using that resource costs 25% more of it; at 0, deliveries stop.",
+      "Your gate: a batch passes inspection when a run for any buyer other than your anchor is delivered in full, on the tick promised, and checked by the Customer desk.",
+      "Anyone may negotiate. A deal proposed in the Portal is real only when a signatory or the CEO accepts it.",
+      "Desks enter your purchases, loans, contracts and licences on the platform; check the Station afterwards.",
+      "Nothing settles before Tick 1. No outside internet or AI until the Internet Unlock at Tick 8.",
+      "Stuck on the platform? The helpdesk is open all day.",
+      "If your group drew this company as a new venture",
+      "Once the GM opens the Founder Window, 3 or more people can found a company with 10,000 VB committed between you from wallets or resources, plus a recorded founder agreement and resource agreement. You drew Forgeline at random and run it yourselves: there is no volunteer CEO. You must record a sale or a customer contract within 2 ticks, or Forgeline becomes Distressed. Each person can found only once, and only a limited number of new companies can start in a day, first come first served. Your GM's start sheet replaces the cash, resources, anchor, supplier deal and technical debt above, and tells you where to read your Company Station. Everything else here still describes your company. Spare line time is your quickest first sale."
+    ]
+  },
+  {
+    "id": "comp_trustlayer",
+    "code": "TRL",
+    "name": "TrustLayer",
+    "sector": "Cybersecurity and compliance software",
+    "tagline": "Monitoring sold by the tick; one-off audits; compliance attestations once approved as an auditor.",
+    "description": "Founded by two former incident responders tired of arriving after the damage. The engine is good; selling a loss that has not happened yet is slow. Analysts run the building and never overstate a finding. Every business in the city secure enough to be trusted with other people's money and data.",
+    "cluster": "Digital, Regulated",
+    "workforce_mix": "Tech-led",
+    "fills_slots": [
+      "S8"
+    ],
+    "critical_slot": "S3 Compute hosting",
+    "ceo_persona": "Risk Guardian",
+    "deficit_domain": "Brand / Community",
+    "hidden_lever": "Unlock: 2 clean audits open the regulated Enterprise buyer",
+    "vulnerability": "Hidden liability: breach warranty claims",
+    "consumption": {
+      "compute": "High",
+      "energy": "Low",
+      "logistics": "Low",
+      "materials": "Low",
+      "data": "Very High",
+      "infrastructure": "Medium"
+    },
+    "initial_cash": 31050,
+    "scarcest_resources": "Data, which runs out during Tick 7 if you buy none",
+    "deadlines": "Tick 4: your cheap Data deal ends unless renewed. Tick 6: your lead auditor leaves unless a retention deal is recorded first; your public target falls due; your anchor's last scheduled payment before renewal",
+    "cannot_do_alone": "Hosted compute: the engine has to run somewhere",
+    "gate_licence": "Approved Auditor status, from Government",
+    "notable_asset": "The threat-detection engine, book value 6,000 VB (it counts as Bank collateral)",
+    "at_a_glance": "You sell the breach that never happened. TrustLayer is the only security provider among Venture City's companies: monitoring by the tick, audits, and compliance attestations. Two regulated companies cannot be licensed without someone like you. Your engine is the best in the city. Your attestations count for nothing until Government approves you as an auditor, and the person who leads your audits may not stay.",
+    "founder_letter": "Team,\n\nWe spent years as incident responders. We were very good at it, and we always arrived after the damage. We built TrustLayer so that we could arrive first.\n\nThe engine works. Last quarter it caught three intrusions at our anchor client and nobody outside this room knows. That is the problem in one sentence: when we do our job perfectly, nothing happens, and nobody pays for nothing.\n\nYou have strong analysts, a lead auditor we cannot afford to lose, and nobody who knows how to tell the story. Show results. Keep your promises small and your evidence large.\n\nThe founders",
+    "products_table": [
+      [
+        "",
+        "Security monitoring",
+        "Compliance audit and attestation"
+      ],
+      [
+        "Buyer gets",
+        "One tick of monitoring for one client: counts as security cover for that tick, and meets any customer card that names security as a must-have",
+        "One audit of the buyer's systems; once you are an Approved Auditor, it comes with an attestation that counts as security evidence in a Government licence application"
+      ],
+      [
+        "Uses per unit",
+        "1 Data, 1 Compute",
+        "2 Data, 1 Compute"
+      ],
+      [
+        "Up to, per tick",
+        "5",
+        "1"
+      ],
+      [
+        "List / lowest price (VB)",
+        "200 / 150",
+        "800 / 600"
+      ],
+      [
+        "Sold to",
+        "Other companies and large customers",
+        "Other companies and large customers"
+      ],
+      [
+        "Licence",
+        "None",
+        "The attestation needs Approved Auditor status"
+      ]
+    ],
+    "obligations_table": [
+      [
+        "Obligation",
+        "Terms"
+      ],
+      [
+        "Anchor customer",
+        "Civic Insurance Mutual: 1 monitoring unit every tick at 900 VB, Ticks 1 to 6 (5,400 VB). Then up for renewal at the Customer desk."
+      ],
+      [
+        "Supplier deal",
+        "OpenData Exchange: Data at 22 VB a unit (12% below normal), up to 12 a tick. Ends at Tick 4 unless you commit to 3 ticks at 12 units."
+      ],
+      [
+        "Key person",
+        "Your lead auditor (Product / Build) leaves at Tick 6 unless a retention deal is recorded first."
+      ],
+      [
+        "Your memorandum",
+        "With StackHouse, the city's compute host: \"Hosted compute for the threat-detection engine.\" A recorded need, not a contract."
+      ],
+      [
+        "Memoranda you hold",
+        "From Ledgerly, a payments company: \"Security monitoring and an audit that counts toward the payments licence.\" From MediLink, a health marketplace: \"Security cover and an attestation to close the data compliance gap.\" Their needs, not contracts."
+      ]
+    ],
+    "leads_table": [
+      [
+        "Lead",
+        "What you know"
+      ],
+      [
+        "Pinecrest Clinics",
+        "A big customer at the Customer desk that wants monitoring and a compliance attestation. The attestation must come from an Approved Auditor."
+      ],
+      [
+        "A payments firm",
+        "Needs security cover before it can be licensed: monitoring now, an audit and attestation once you are approved."
+      ],
+      [
+        "The city's data centre",
+        "Has idle capacity. You need hosted compute, and idle capacity is a buyer's market."
+      ]
+    ],
+    "dependencies_table": [
+      [
+        "You need",
+        "Who might supply it",
+        "If nobody does"
+      ],
+      [
+        "Hosted compute (critical)",
+        "StackHouse, your memorandum partner, and maybe others",
+        "The Supplier Market at about 10% below the Bank's 20, minimum order 20; the Bank at 20, up to 30 a tick"
+      ],
+      [
+        "Trained talent",
+        "A training business, if one is in the city",
+        "The Talent Exchange"
+      ],
+      [
+        "Verified datasets",
+        "A data business, if one is in the city",
+        "The Supplier Market's Data, about 10% below the Bank's 25"
+      ]
+    ],
+    "objectives_table": [
+      [
+        "Layer",
+        "Target"
+      ],
+      [
+        "Survive",
+        "Never Distressed two ticks running; solvent at the freeze"
+      ],
+      [
+        "Revenue",
+        "18,000 VB of new revenue by the freeze, not counting the anchor's first six ticks"
+      ],
+      [
+        "Grow",
+        "Become an Approved Auditor and issue one attestation"
+      ],
+      [
+        "Public objective",
+        "Provide security cover to 2 regulated companies by Tick 6"
+      ]
+    ],
+    "intel_facts_table": [
+      [
+        "",
+        ""
+      ],
+      [
+        "Inside fact",
+        "\"Our engine caught three intrusions at our anchor client last quarter, and nobody outside knows.\""
+      ],
+      [
+        "Market fact",
+        "\"The city's compute host has half its halls empty and would rather sell cheap than sit idle.\""
+      ],
+      [
+        "Rumour",
+        "\"A major breach is coming; someone in the city has already been hit.\""
+      ],
+      [
+        "Overheard",
+        "\"One of our monitored clients ignored our last three patch warnings.\""
+      ]
+    ],
+    "dossier_filename": "12 - TrustLayer - Founder Dossier.docx",
+    "dossier_url": "/dossiers/12 - TrustLayer - Founder Dossier.docx",
+    "dossier_slug_url": "/dossiers/comp_trustlayer.docx",
+    "all_paragraphs": [
+      "VENTURE CITY \u00b7 FOUNDER DOSSIER",
+      "TrustLayer",
+      "Saturday 10 October 2026 \u00b7 For every founder and member of staff of TrustLayer",
+      "What your company knows at City Opens. New messages arrive in your company inbox during the day. Your live numbers are on the Company Station: if this dossier and the Station disagree, the Station is right.",
+      "At a glance",
+      "You sell the breach that never happened. TrustLayer is the only security provider among Venture City's companies: monitoring by the tick, audits, and compliance attestations. Two regulated companies cannot be licensed without someone like you. Your engine is the best in the city. Your attestations count for nothing until Government approves you as an auditor, and the person who leads your audits may not stay.",
+      "A letter from the founders",
+      "Team,",
+      "We spent years as incident responders. We were very good at it, and we always arrived after the damage. We built TrustLayer so that we could arrive first.",
+      "The engine works. Last quarter it caught three intrusions at our anchor client and nobody outside this room knows. That is the problem in one sentence: when we do our job perfectly, nothing happens, and nobody pays for nothing.",
+      "You have strong analysts, a lead auditor we cannot afford to lose, and nobody who knows how to tell the story. Show results. Keep your promises small and your evidence large.",
+      "The founders",
+      "Who you are",
+      "Your team",
+      "Your CEO is a volunteer playing the Risk Guardian: evidence before money; no credit without proof; tends to miss fast opportunities.",
+      "Your staff are strong in technology: analysts. You are one person short in Brand / Community: nobody can make the case for prevention. That empty seat costs 225 VB every tick until it is filled. Everyone starts at Level 0 on 100 VB per tick.",
+      "Before Market Open, elect two Authorised Signatories. Either can approve spending up to 5,000 VB; above that needs the CEO or both together. Pick people who will be around before Tick 6.",
+      "Capital and resources",
+      "Figures assume a 9-person company; the platform sets your real numbers when registration closes. Your Company Station (the CEO volunteer's tablet) shows your live cash, stock, contracts, deadlines and people. Your Participant Portal (scan the QR on your badge) holds your wallet, offers and the deals you propose. There is no physical money: the platform is the record.",
+      "Products",
+      "Your attestation lets a buyer skip Government's own security review, which costs 1,500 VB and takes 2 ticks. Government still issues the licence.",
+      "What you start with: obligations",
+      "Customers and leads",
+      "Civic Insurance Mutual is your only steady income. Its board sees you as a cost line, and renewal will depend on whether it can show what it got for the money.",
+      "Open customer cards sit at the Customer desk. Ask what each customer must have, and listen for what they need but did not write down.",
+      "Who you need, and who needs you",
+      "Others need you for security and compliance: Ledgerly and MediLink, whose memoranda you hold, and possibly an analytics firm or a compute host. Large regulated customers want monitoring and attestations too. Your rival is the regulator: Government's review is slower and dearer than your attestation, but it is always there.",
+      "Immediate challenges",
+      "Bottleneck: Data. Every monitoring unit uses one more; every audit uses two.",
+      "Weakness: nobody to sell prevention.",
+      "Known risks: your attestations do not count until you are an Approved Auditor; the lead auditor leaves at Tick 6 without a retention deal, and Government wants a lead auditor at Level 2 for approval.",
+      "Objectives",
+      "Your CEO also holds a private objective in a sealed envelope, and each of you has a personal objective in your Portal.",
+      "Options on the table",
+      "Obvious: sell monitoring to the regulated companies that need cover before they can be licensed; renew the anchor on better terms.",
+      "Worth finding: the compute host has idle halls and may sell hosting cheap; a payments firm cannot be licensed without security.",
+      "Bigger moves: make the attestation the product and become compliance-as-a-service; build fraud detection for payment businesses; set up a security training unit with a training business; merge with a payments firm or the compute host.",
+      "What only you know",
+      "You also see attacks against your clients before anyone else. None of these is marked true or false. You may share, sell or trade them. Some people on your team may hold a sealed note the rest have not seen. Ask.",
+      "Rules that matter most",
+      "A company is Distressed if its cash is below zero after a tick, it misses a loan payment, it has fewer than 3 staff, or a High or Very High resource sits at 0 for 2 ticks. You then have 2 ticks to fix it.",
+      "Stock: a warning at 30 units; at 15, anything using that resource costs 25% more of it; at 0, deliveries stop.",
+      "Approved Auditor status only changes whose evidence Government accepts; licences still go through Government's standard process.",
+      "Anyone may negotiate. A deal proposed in the Portal is real only when a signatory or the CEO accepts it.",
+      "Desks enter your purchases, loans, contracts and licences on the platform; check the Station afterwards.",
+      "Nothing settles before Tick 1. No outside internet or AI until the Internet Unlock at Tick 8.",
+      "Stuck on the platform? The helpdesk is open all day."
+    ]
+  }
+]
