@@ -56,6 +56,29 @@ export default function MissionsPortalPage() {
 
   // Claim Loading
   const [claimingId, setClaimingId] = useState<string | null>(null);
+  const [intelBuying, setIntelBuying] = useState(false);
+  const [intelMsg, setIntelMsg] = useState<string | null>(null);
+  const [showTreasureGuide, setShowTreasureGuide] = useState(false);
+
+  const handleBuyIntelClue = async (stationId: string) => {
+    setIntelBuying(true);
+    setIntelMsg(null);
+    try {
+      const res = await fetch('/api/intel/purchase', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ stationId }),
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || 'Failed to purchase intel');
+      setVerifyToken(data.flagToken);
+      setIntelMsg(`Decrypted! Flag: ${data.flagToken} (-${data.costPaid} VB)`);
+    } catch (err: any) {
+      setVerifyError(err.message);
+    } finally {
+      setIntelBuying(false);
+    }
+  };
 
   const loadMissions = async () => {
     try {
@@ -224,6 +247,72 @@ export default function MissionsPortalPage() {
               <div className="text-[9px] font-normal">Tiers 7 - 10</div>
             </div>
           </div>
+        </div>
+
+        {/* Treasure Hunt & Physical Flag Station Intel Banner */}
+        <div className="bg-vc-card border border-vc-gold/40 rounded-xl p-4 shadow space-y-3">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <Key className="w-4 h-4 text-vc-gold" />
+              <span className="text-xs font-syne font-bold text-white uppercase tracking-wider">
+                Treasure Hunt & Physical Flags Guide
+              </span>
+            </div>
+            <button
+              onClick={() => setShowTreasureGuide((prev) => !prev)}
+              className="text-[10px] text-vc-gold hover:underline font-bold"
+            >
+              {showTreasureGuide ? 'Hide Station Keys' : 'Show Station Clues & Keys'}
+            </button>
+          </div>
+          <p className="text-[11px] text-gray-400">
+            For quests requiring flag tokens: visit the physical city station in person to get verified by the volunteer, OR purchase encrypted intelligence from the desk.
+          </p>
+
+          {showTreasureGuide && (
+            <div className="pt-2 border-t border-gray-800 grid grid-cols-2 gap-2 text-[10px]">
+              <div className="p-2 bg-black/40 rounded border border-gray-800 space-y-1">
+                <div className="font-bold text-vc-gold">Apex Reserve Bank</div>
+                <div className="text-gray-400 font-mono">FLAG-BANK-VAULT-2026</div>
+                <div className="text-gray-500">Visit Bank desk or pay 150 VB</div>
+              </div>
+              <div className="p-2 bg-black/40 rounded border border-gray-800 space-y-1">
+                <div className="font-bold text-vc-emerald">Dept of Commerce</div>
+                <div className="text-gray-400 font-mono">FLAG-GOV-SEAL-2026</div>
+                <div className="text-gray-500">Visit Gov desk or pay 150 VB</div>
+              </div>
+              <div className="p-2 bg-black/40 rounded border border-gray-800 space-y-1">
+                <div className="font-bold text-vc-blue">Frontier Fund</div>
+                <div className="text-gray-400 font-mono">FLAG-INVESTOR-TERM-2026</div>
+                <div className="text-gray-500">Visit Investor desk or pay 150 VB</div>
+              </div>
+              <div className="p-2 bg-black/40 rounded border border-gray-800 space-y-1">
+                <div className="font-bold text-purple-400">Talent Exchange</div>
+                <div className="text-gray-400 font-mono">FLAG-TALENT-DRAFT-2026</div>
+                <div className="text-gray-500">Visit Talent desk or pay 150 VB</div>
+              </div>
+              <div className="p-2 bg-black/40 rounded border border-gray-800 space-y-1">
+                <div className="font-bold text-amber-400">Prime Supplier</div>
+                <div className="text-gray-400 font-mono">FLAG-SUPPLY-STOCK-2026</div>
+                <div className="text-gray-500">Visit Supplier desk or pay 150 VB</div>
+              </div>
+              <div className="p-2 bg-black/40 rounded border border-gray-800 space-y-1">
+                <div className="font-bold text-cyan-400">Swift Logistics</div>
+                <div className="text-gray-400 font-mono">FLAG-LOGISTICS-RUN-2026</div>
+                <div className="text-gray-500">Visit Logistics desk or pay 150 VB</div>
+              </div>
+              <div className="p-2 bg-black/40 rounded border border-gray-800 space-y-1">
+                <div className="font-bold text-pink-400">The Daily Chronicle</div>
+                <div className="text-gray-400 font-mono">FLAG-MEDIA-LEAK-2026</div>
+                <div className="text-gray-500">Visit Media desk or pay 150 VB</div>
+              </div>
+              <div className="p-2 bg-black/40 rounded border border-gray-800 space-y-1">
+                <div className="font-bold text-rose-400">GM Citadel Citadel</div>
+                <div className="text-gray-400 font-mono">FLAG-GM-CITADEL-2026</div>
+                <div className="text-gray-500">Visit GM Citadel or pay 250 VB</div>
+              </div>
+            </div>
+          )}
         </div>
 
         {/* Filter Navigation Tabs */}
@@ -511,6 +600,18 @@ export default function MissionsPortalPage() {
                       <p className="text-[10px] text-gray-500 mt-1">
                         Enter the physical token card number provided at the station desk.
                       </p>
+                      <div className="pt-2 flex items-center justify-between">
+                        <button
+                          type="button"
+                          onClick={() => handleBuyIntelClue(verifyMissionItem.station_id || 'bank')}
+                          disabled={intelBuying}
+                          className="text-[11px] text-vc-gold hover:text-yellow-300 font-bold flex items-center gap-1.5 bg-vc-gold/10 hover:bg-vc-gold/20 border border-vc-gold/30 px-2.5 py-1.5 rounded transition-all"
+                        >
+                          <Key className="w-3.5 h-3.5" />
+                          <span>{intelBuying ? 'Decrypting Intel...' : 'Buy Decrypt Clue & Flag (-150 VB)'}</span>
+                        </button>
+                        {intelMsg && <span className="text-[10px] text-vc-emerald font-bold font-mono">{intelMsg}</span>}
+                      </div>
                     </div>
                   )}
 

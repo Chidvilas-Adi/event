@@ -15,9 +15,15 @@ export async function GET(req: NextRequest) {
   // Use explicit wave set by GM, or default based on tick
   const activeWave = worldRes.rows[0]?.wave || (currentTick >= 4 ? 3 : currentTick >= 2 ? 2 : 1);
 
-  // Fetch participant company role if participant
+  // Fetch participant company role or volunteer role
   let companyRole = user.companyRole;
-  if (!companyRole && (user.role === 'participant' || user.role === 'company_lead')) {
+  if (!companyRole && user.role === 'volunteer') {
+    const opRes = await pool.query(
+      "SELECT name, institution_id FROM operator_accounts WHERE id = $1 LIMIT 1",
+      [user.userId]
+    );
+    companyRole = opRes.rows[0]?.name || user.name;
+  } else if (!companyRole && (user.role === 'participant' || user.role === 'company_lead')) {
     const memRes = await pool.query(
       "SELECT role FROM memberships WHERE participant_id = $1 AND status = 'active' LIMIT 1",
       [user.userId]

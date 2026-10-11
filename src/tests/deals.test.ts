@@ -91,30 +91,30 @@ describe('Phase 2: Economy and Deals Engine', () => {
       const initialPool = instRes.rows[0].config.lending_pool_remaining;
       expect(initialPool).toBe(80000);
 
-      // 2. comp_prana requests 15,000 VB loan from bank
+      // 2. comp_mango requests 15,000 VB loan from bank
       const loanDealRes = await DealService.createDeal({
         templateType: 'loan',
         senderType: 'company',
-        senderId: 'comp_prana',
+        senderId: 'comp_mango',
         recipientType: 'institution',
         recipientId: 'bank',
         terms: {
           principal: 15000,
           interest_rate_percent: 10,
           duration_ticks: 8,
-          collateral: 'Biotech IP Portfolio',
+          collateral: 'Mango Supply Platform IP',
         },
-        authoriser: 'vc_p_019',
+        authoriser: 'vc_p_017',
       });
 
-      const pranaBalBefore = await LedgerService.getBalance('company', 'comp_prana');
+      const pranaBalBefore = await LedgerService.getBalance('company', 'comp_mango');
 
       // 3. Bank accepts loan
       const acceptRes = await DealService.acceptDeal(loanDealRes.dealId, 'op_bank', false);
       expect(acceptRes.success).toBe(true);
 
       // Verify prana received 15,000 VB in ledger
-      const pranaBalAfter = await LedgerService.getBalance('company', 'comp_prana');
+      const pranaBalAfter = await LedgerService.getBalance('company', 'comp_mango');
       expect(pranaBalAfter).toBe(pranaBalBefore + 15000);
 
       // Verify Bank lending pool remaining decreased from 80k to 65k
@@ -123,25 +123,25 @@ describe('Phase 2: Economy and Deals Engine', () => {
 
       // Verify active loan record created
       const loanRow = await pool.query('SELECT * FROM loans WHERE company_id = $1 AND status = $2', [
-        'comp_prana',
+        'comp_mango',
         'active',
       ]);
       expect(loanRow.rows.length).toBe(1);
       expect(loanRow.rows[0].principal).toBe(15000);
 
       // 4. Verify STRICT 1-loan per company enforcement:
-      // comp_prana attempts to take a SECOND loan while one is already open
+      // comp_mango attempts to take a SECOND loan while one is already open
       const secondLoanDeal = await DealService.createDeal({
         templateType: 'loan',
         senderType: 'company',
-        senderId: 'comp_prana',
+        senderId: 'comp_mango',
         recipientType: 'institution',
         recipientId: 'bank',
         terms: {
           principal: 5000,
           interest_rate_percent: 10,
         },
-        authoriser: 'vc_p_019',
+        authoriser: 'vc_p_017',
       });
 
       await expect(
@@ -152,11 +152,11 @@ describe('Phase 2: Economy and Deals Engine', () => {
 
   describe('Frontier Venture Fund (140,000 VB Fund & Max 7 Deals)', () => {
     it('executes equity investment deal, enforces 140k fund limit, and dilutes cap table atomically', async () => {
-      // comp_nxtgrid pitches for 20,000 VB investment for 10% equity
+      // comp_skillforge pitches for 20,000 VB investment for 10% equity
       const investDealRes = await DealService.createDeal({
         templateType: 'investment',
         senderType: 'company',
-        senderId: 'comp_nxtgrid',
+        senderId: 'comp_skillforge',
         recipientType: 'institution',
         recipientId: 'investor',
         terms: {
@@ -165,17 +165,17 @@ describe('Phase 2: Economy and Deals Engine', () => {
           pre_money_valuation: 180000,
           rights: { board_observer: true, info_rights: true },
         },
-        authoriser: 'vc_p_028',
+        authoriser: 'vc_p_025',
       });
 
-      const nxtgridBalBefore = await LedgerService.getBalance('company', 'comp_nxtgrid');
+      const nxtgridBalBefore = await LedgerService.getBalance('company', 'comp_skillforge');
 
       // Investor accepts deal
       const acceptRes = await DealService.acceptDeal(investDealRes.dealId, 'op_investor', false);
       expect(acceptRes.success).toBe(true);
 
       // Verify funds transferred
-      const nxtgridBalAfter = await LedgerService.getBalance('company', 'comp_nxtgrid');
+      const nxtgridBalAfter = await LedgerService.getBalance('company', 'comp_skillforge');
       expect(nxtgridBalAfter).toBe(nxtgridBalBefore + 20000);
 
       // Verify Investor fund remaining decreased from 140,000 to 120,000
@@ -184,16 +184,9 @@ describe('Phase 2: Economy and Deals Engine', () => {
       expect(fundRes.rows[0].config.investments_completed).toBe(1);
 
       // Verify Cap Table was atomically diluted:
-      // In seed: Founder was 60%, Employee was 25%, Reserve was 15%.
-      // After 10% dilution, existing holders are scaled by (100 - 10)/100 = 0.9:
-      // Founder -> 60 * 0.9 = 54%
-      // Employee -> 25 * 0.9 = 22.5%
-      // Reserve -> 15 * 0.9 = 13.5%
-      // Investor -> 10.0%
-      // Total sum = 54 + 22.5 + 13.5 + 10.0 = 100.0%
       const capRows = await pool.query<{ shareholder_type: string; shares_or_percent: string }>(
         'SELECT shareholder_type, shares_or_percent FROM cap_table WHERE company_id = $1 ORDER BY shares_or_percent DESC',
-        ['comp_nxtgrid']
+        ['comp_skillforge']
       );
 
       const totalShares = capRows.rows.reduce((sum, r) => sum + parseFloat(r.shares_or_percent), 0);
@@ -207,34 +200,34 @@ describe('Phase 2: Economy and Deals Engine', () => {
 
   describe('Competitive Auctions Engine', () => {
     it('creates an auction, accepts verified bids, and settles atomically to highest bidder', async () => {
-      // 1. comp_vayu creates auction for rare space sensor payload
+      // 1. comp_pulseai creates auction for rare payload slot
       const auction = await AuctionService.createAuction({
         title: 'Micro-Satellite Sub-orbital Payload Slot',
         itemType: 'payload_slot',
         itemData: { orbit: 'LEO', mass_kg: 25 },
         sellerType: 'company',
-        sellerId: 'comp_vayu',
+        sellerId: 'comp_pulseai',
         reservePrice: 5000,
-        authoriserId: 'vc_p_046',
+        authoriserId: 'vc_p_033',
       });
 
       expect(auction.id).toBeDefined();
       expect(auction.status).toBe('active');
 
-      // 2. comp_samudra bids 6,000 VB
+      // 2. comp_greengrid bids 6,000 VB
       const bid1 = await AuctionService.placeBid({
         auctionId: auction.id,
         bidderType: 'company',
-        bidderId: 'comp_samudra',
+        bidderId: 'comp_greengrid',
         amount: 6000,
       });
       expect(bid1.amount).toBe(6000);
 
-      // 3. comp_quantum outbids with 8,000 VB
+      // 3. comp_voltway outbids with 8,000 VB
       const bid2 = await AuctionService.placeBid({
         auctionId: auction.id,
         bidderType: 'company',
-        bidderId: 'comp_quantum',
+        bidderId: 'comp_voltway',
         amount: 8000,
       });
       expect(bid2.amount).toBe(8000);
@@ -244,22 +237,22 @@ describe('Phase 2: Economy and Deals Engine', () => {
         AuctionService.placeBid({
           auctionId: auction.id,
           bidderType: 'company',
-          bidderId: 'comp_samudra',
+          bidderId: 'comp_greengrid',
           amount: 7000,
         })
       ).rejects.toThrow(/must exceed current high bid/);
 
       // 4. Settle auction
-      const vayuBalBefore = await LedgerService.getBalance('company', 'comp_vayu');
-      const quantumBalBefore = await LedgerService.getBalance('company', 'comp_quantum');
+      const vayuBalBefore = await LedgerService.getBalance('company', 'comp_pulseai');
+      const quantumBalBefore = await LedgerService.getBalance('company', 'comp_voltway');
 
       const settlement = await AuctionService.settleAuction(auction.id, 'op_admin');
-      expect(settlement.winnerId).toBe('comp_quantum');
+      expect(settlement.winnerId).toBe('comp_voltway');
       expect(settlement.winningAmount).toBe(8000);
 
       // Verify atomic ledger transfer between winner and seller
-      const vayuBalAfter = await LedgerService.getBalance('company', 'comp_vayu');
-      const quantumBalAfter = await LedgerService.getBalance('company', 'comp_quantum');
+      const vayuBalAfter = await LedgerService.getBalance('company', 'comp_pulseai');
+      const quantumBalAfter = await LedgerService.getBalance('company', 'comp_voltway');
 
       expect(vayuBalAfter).toBe(vayuBalBefore + 8000);
       expect(quantumBalAfter).toBe(quantumBalBefore - 8000);

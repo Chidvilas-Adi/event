@@ -3,12 +3,12 @@ import { hashPassword } from '@/lib/auth/session';
 import crypto from 'crypto';
 import fs from 'fs';
 import path from 'path';
-import { MissionAutomation } from '@/lib/missions/automation';
+import { MissionAutomationEngine } from '@/lib/missions/automation';
 
 export async function executeCompleteWorldReset(actorId: string = 'system') {
   console.log('🔄 Executing Complete World Reset to Canonical Master State...');
 
-  return await withTransaction(async (client) => {
+  await withTransaction(async (client) => {
     // 0. Disable append-only triggers
     await client.query('ALTER TABLE audit_log DISABLE TRIGGER trg_audit_log_append_only;');
     await client.query('ALTER TABLE ledger_entries DISABLE TRIGGER trg_ledger_entries_append_only;');
@@ -57,15 +57,15 @@ export async function executeCompleteWorldReset(actorId: string = 'system') {
 
     // 4. Seed Resources with Bank Base Prices (Total 100 of each = 12,500 VB per company inventory)
     const resources = [
-      { id: 'compute', name: 'Compute Core', description: 'Cloud GPU/CPU capacity', base_price: 25 },
-      { id: 'energy', name: 'Clean Energy', description: 'Kilowatt energy credits', base_price: 15 },
-      { id: 'logistics', name: 'Fleet Delivery Run', description: 'Dispatch delivery slot', base_price: 20 },
-      { id: 'materials', name: 'Physical Raw Inventory', description: 'Manufacturing input parts', base_price: 20 },
-      { id: 'data', name: 'Consumer & Market Telemetry', description: 'Data streams and audience records', base_price: 20 },
-      { id: 'infrastructure', name: 'Facilities & Hardware Space', description: 'Facility hosting and server racks', base_price: 25 },
+      { id: 'compute', name: 'Compute Units', unit: 'FLOPs/hr', base_price: 25, description: 'High-performance cloud & AI compute clusters' },
+      { id: 'energy', name: 'Clean Energy', unit: 'kWh', base_price: 15, description: 'Grid energy cells for powering infrastructure' },
+      { id: 'logistics', name: 'Logistics Slots', unit: 'Crates', base_price: 20, description: 'Express delivery and physical routing capacity' },
+      { id: 'materials', name: 'Raw Materials', unit: 'kg', base_price: 20, description: 'Advanced composite and rare components' },
+      { id: 'data', name: 'Market Data & Info', unit: 'Feeds', base_price: 20, description: 'Proprietary business and telemetry intel' },
+      { id: 'infrastructure', name: 'Infra Modules', unit: 'Racks', base_price: 25, description: 'Modular manufacturing and lab facilities' },
     ];
     for (const r of resources) {
-      await client.query('INSERT INTO resources (id, name, description, base_price, is_tradeable) VALUES ($1, $2, $3, $4, TRUE)', [r.id, r.name, r.description, r.base_price]);
+      await client.query('INSERT INTO resources (id, name, unit, base_price, description) VALUES ($1, $2, $3, $4, $5)', [r.id, r.name, r.unit, r.base_price, r.description]);
     }
 
     // 5. Seed 8 Sovereign City Institutions with Full Pools
@@ -219,22 +219,13 @@ export async function executeCompleteWorldReset(actorId: string = 'system') {
       }
 
       // Seed Clean Starting Cap Table: 800 Founding Common (80%) + 200 Option Pool (20%)
-      const capCommonId = `cap_cmn_${c.id}`;
       await client.query(
-        `INSERT INTO cap_table (
-          id, company_id, shareholder_type, shareholder_id, shareholder_name,
-          share_class, shares_or_percent, shares, value_vb, voting_power
-        ) VALUES ($1, $2, 'founder', $3, $4, 'Common', 80.00, 800, 24000, 1.00)`,
-        [capCommonId, c.id, `fnd_${c.id}`, `${c.name} Founding Team`]
+        'INSERT INTO cap_table (id, company_id, shareholder_type, shareholder_id, shares_or_percent, rights) VALUES ($1, $2, $3, $4, 80.00, $5)',
+        [`cap_${c.id}_founding`, c.id, 'founder', 'Founding Shareholders', JSON.stringify({ class: 'Founding Common', shares: 800 })]
       );
-
-      const capPoolId = `cap_pool_${c.id}`;
       await client.query(
-        `INSERT INTO cap_table (
-          id, company_id, shareholder_type, shareholder_id, shareholder_name,
-          share_class, shares_or_percent, shares, value_vb, voting_power
-        ) VALUES ($1, $2, 'option_pool', 'pool_esop', 'Employee Option Pool', 'Options', 20.00, 200, 6000, 0.00)`,
-        [capPoolId, c.id]
+        'INSERT INTO cap_table (id, company_id, shareholder_type, shareholder_id, shares_or_percent, rights) VALUES ($1, $2, $3, $4, 20.00, $5)',
+        [`cap_${c.id}_pool`, c.id, 'pool', 'Employee Option Pool', JSON.stringify({ class: 'Unallocated Pool', shares: 200 })]
       );
     }
 
@@ -248,7 +239,7 @@ export async function executeCompleteWorldReset(actorId: string = 'system') {
       { id: 'op_investor', username: 'volunteer_investor', name: 'Frontier Fund Partner', role_id: 'volunteer', institution_id: 'investor', password_hash: hashPassword('investor-volunteer-2026'), totp_secret: '555555' },
       { id: 'op_customer', username: 'volunteer_customer', name: 'Enterprise Procurement Officer', role_id: 'volunteer', institution_id: 'enterprise_customer', password_hash: hashPassword('customer-volunteer-2026'), totp_secret: '666666' },
       { id: 'op_talent', username: 'volunteer_talent', name: 'Talent Exchange Officer', role_id: 'volunteer', institution_id: 'talent_exchange', password_hash: hashPassword('talent-volunteer-2026'), totp_secret: '777777' },
-      { id: 'op_supplier', username: 'volunteer_supplier', name: 'Supplier Market Dispatcher', role_id: 'volunteer', institution_id: 'supplier', password_hash: hashPassword('supplier-volunteer-2026'), totp_secret: '888888' },
+      { id: 'op_supplier', username: 'volunteer_supplier', name: 'Prime Supplier Dispatcher', role_id: 'volunteer', institution_id: 'supplier', password_hash: hashPassword('supplier-volunteer-2026'), totp_secret: '888888' },
       { id: 'op_logistics', username: 'volunteer_logistics', name: 'Logistics Controller', role_id: 'volunteer', institution_id: 'logistics', password_hash: hashPassword('logistics-volunteer-2026'), totp_secret: '999999' },
       { id: 'op_government', username: 'volunteer_government', name: 'Commerce Officer', role_id: 'volunteer', institution_id: 'government', password_hash: hashPassword('gov-volunteer-2026'), totp_secret: '101010' },
       { id: 'op_media', username: 'volunteer_media', name: 'Daily Chronicle Editor', role_id: 'volunteer', institution_id: 'media', password_hash: hashPassword('media-volunteer-2026'), totp_secret: '202020' },
@@ -366,7 +357,7 @@ export async function executeCompleteWorldReset(actorId: string = 'system') {
     console.log('✅ Base tables and world state reset successfully. Running automated mission assignments...');
   });
 
-  const missionStats = await MissionAutomation.autoAssignAllMissions();
+  const missionStats = await MissionAutomationEngine.autoAssignAllMissions();
   console.log('✅ Automated missions successfully seeded:', missionStats);
   return { success: true, missionStats };
 }

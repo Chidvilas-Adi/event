@@ -274,7 +274,7 @@ export async function runSeed() {
     let pCount = 1;
     for (let cIdx = 0; cIdx < companies.length; cIdx++) {
       const comp = companies[cIdx];
-      for (let m = 0; m < 9; m++) {
+      for (let m = 0; m < 8; m++) {
         const citizenNum = String(pCount).padStart(3, '0');
         const pId = `vc_p_${citizenNum}`;
         const citizenCode = `VC-${citizenNum}`;

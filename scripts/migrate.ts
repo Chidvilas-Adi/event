@@ -304,7 +304,7 @@ export async function runMigrations() {
       CREATE TABLE IF NOT EXISTS mission_instances (
         id VARCHAR(100) PRIMARY KEY,
         mission_id VARCHAR(100) NOT NULL REFERENCES missions(id),
-        participant_id VARCHAR(100) NOT NULL REFERENCES participants(id),
+        participant_id VARCHAR(100) NOT NULL,
         status VARCHAR(50) NOT NULL DEFAULT 'available',
         evidence JSONB,
         counterparty_code VARCHAR(50),
@@ -316,6 +316,7 @@ export async function runMigrations() {
         completed_at TIMESTAMPTZ,
         created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
       );
+      ALTER TABLE mission_instances DROP CONSTRAINT IF EXISTS mission_instances_participant_id_fkey;
       ALTER TABLE mission_instances ADD COLUMN IF NOT EXISTS reward_vb_paid INT NOT NULL DEFAULT 0;
       ALTER TABLE mission_instances ADD COLUMN IF NOT EXISTS verified_by VARCHAR(100);
       ALTER TABLE mission_instances ADD COLUMN IF NOT EXISTS notes TEXT;

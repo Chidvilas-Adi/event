@@ -353,16 +353,31 @@ export class MissionService {
             : 'Counterparty verification required. Provide the transaction ID or counterparty verification code.';
         }
       } else if (method === 'scan_token') {
-        const inputToken = submission.token?.trim().toUpperCase();
+        const inputToken = (submission.token || submission.code)?.trim().toUpperCase();
         const expectedToken = instance.verification_secret?.trim().toUpperCase();
+        const validStationFlags = [
+          'FLAG-BANK-VAULT-2026',
+          'FLAG-GOV-SEAL-2026',
+          'FLAG-INVESTOR-TERM-2026',
+          'FLAG-TALENT-DRAFT-2026',
+          'FLAG-SUPPLY-STOCK-2026',
+          'FLAG-LOGISTICS-RUN-2026',
+          'FLAG-PROCURE-RFP-2026',
+          'FLAG-MEDIA-LEAK-2026',
+          'FLAG-GM-CITADEL-2026',
+          'FLAG-TECH-ROOT-2026',
+          'FLAG-FOUNDER-HEX-77',
+        ];
         if (inputToken && expectedToken && inputToken === expectedToken) {
+          isVerified = true;
+        } else if (inputToken && validStationFlags.includes(inputToken)) {
           isVerified = true;
         } else if (inputToken && !expectedToken) {
           // Fallback if token was physical corridor token
           isVerified = true;
         } else {
           failureReason = expectedToken
-            ? `Invalid corridor token. Expected token key: ${expectedToken}`
+            ? `Invalid corridor token or secret flag. Expected token key: ${expectedToken}`
             : 'Invalid station token. Obtain physical token at station desk.';
         }
       } else if (method === 'station_checkin') {

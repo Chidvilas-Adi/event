@@ -131,9 +131,9 @@ describe('Phase 5 - Security Hardening, Observer Ledger, Investor Packets & Macr
     expect(auditRes.rows[0].actor_id).toBe(observerUser.userId);
   });
 
-  it('validates Investor Day Packets Engine: computes SPV, ratings, cap tables for all 10 ventures', async () => {
+  it('validates Investor Day Packets Engine: computes SPV, ratings, cap tables for all 12 ventures', async () => {
     const packets = await InvestorPacketService.generateAllPackets();
-    expect(packets.length).toBe(10);
+    expect(packets.length).toBe(12);
 
     for (const pkt of packets) {
       expect(pkt.companyId).toMatch(/^comp_/);
@@ -153,11 +153,11 @@ describe('Phase 5 - Security Hardening, Observer Ledger, Investor Packets & Macr
   it('validates Macroeconomic Telemetry: ensures M0 conservation and Gini coefficient boundaries', async () => {
     const analytics = await EconomyAnalyticsService.getEconomyAnalytics();
 
-    expect(analytics.companiesCount).toBe(10);
+    expect(analytics.companiesCount).toBe(12);
     expect(analytics.m0MoneySupplyVb).toBeGreaterThan(0);
     expect(analytics.totalGrantsIssuedVb).toBeGreaterThanOrEqual(analytics.m0MoneySupplyVb);
     expect(analytics.zeroSumBalanced).toBe(true);
-    expect(analytics.companyWealthDistribution.length).toBe(10);
+    expect(analytics.companyWealthDistribution.length).toBe(12);
 
     // Gini coefficient must strictly be between 0 (perfect equality) and 1 (perfect inequality)
     expect(analytics.giniCoefficient).toBeGreaterThanOrEqual(0);

@@ -26,8 +26,13 @@ import {
   FileCheck,
   Plus,
   Send,
+  Key,
+  Sparkles,
+  Copy,
+  Check,
 } from 'lucide-react';
 import { ModalDialog } from '@/components/ui/modal-dialog';
+import { STATION_FLAGS } from '@/lib/data/station-flags';
 
 const DESK_META: Record<string, { name: string; title: string; icon: any; color: string }> = {
   bank: { name: 'Apex Reserve Bank', title: 'LENDING & RESOURCE VAULT', icon: Landmark, color: 'text-vc-gold' },
@@ -53,6 +58,9 @@ export default function InstitutionDeskConsolePage() {
   const [loading, setLoading] = useState(true);
   const [refreshing, setRefreshing] = useState(false);
   const [actionLoading, setActionLoading] = useState<string | null>(null);
+  const [volunteerMissions, setVolunteerMissions] = useState<any[]>([]);
+  const [missionVerifyingId, setMissionVerifyingId] = useState<string | null>(null);
+  const [copiedFlag, setCopiedFlag] = useState(false);
 
   // Counter Modal State
   const [counterDealId, setCounterDealId] = useState<string | null>(null);
@@ -236,9 +244,54 @@ export default function InstitutionDeskConsolePage() {
         const pData = await partRes.json();
         setParticipants(pData.participants || []);
       }
+
+      // 7. Fetch volunteer missions
+      const mRes = await fetch('/api/missions');
+      if (mRes.ok) {
+        const mData = await mRes.json();
+        setVolunteerMissions(mData.missions || []);
+      }
     } finally {
       setLoading(false);
       setRefreshing(false);
+    }
+  };
+
+  const handleVerifyVolunteerMission = async (mission: any) => {
+    if (!mission?.instance?.id) return;
+    setMissionVerifyingId(mission.id);
+    try {
+      const stationFlag = STATION_FLAGS[instId]?.flag || '';
+      const res = await fetch(`/api/missions/${mission.instance.id}/verify`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          code: mission.verification_secret || stationFlag,
+          token: mission.verification_secret || stationFlag,
+        }),
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || 'Verification failed');
+      setDialogConfig({
+        isOpen: true,
+        title: 'Mission Completed!',
+        message: data.message || `+${mission.reward_vb} VB credited to your ledger!`,
+        type: 'alert',
+        variant: 'emerald',
+        onConfirm: () => setDialogConfig((prev) => ({ ...prev, isOpen: false })),
+      });
+      loadData();
+    } catch (err: any) {
+      setDialogConfig({
+        isOpen: true,
+        title: 'Verification Incomplete',
+        message: err.message,
+        type: 'alert',
+        variant: 'danger',
+        onConfirm: () => setDialogConfig((prev) => ({ ...prev, isOpen: false })),
+      });
+    } finally {
+      setMissionVerifyingId(null);
     }
   };
 
@@ -782,6 +835,104 @@ export default function InstitutionDeskConsolePage() {
             )}
           </div>
         </div>
+
+        {/* Station Secret Verification Flag Banner */}
+        <div className="bg-vc-card border border-vc-gold/40 rounded-xl p-4 shadow-lg flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="flex items-center gap-3">
+            <div className="p-2.5 rounded-lg bg-vc-gold/10 border border-vc-gold/30 text-vc-gold">
+              <Key className="w-5 h-5" />
+            </div>
+            <div>
+              <span className="text-[10px] text-gray-400 font-bold uppercase tracking-wider">
+                Official Physical Station Flag (Verification Token)
+              </span>
+              <div className="text-sm font-mono font-bold text-vc-gold flex items-center gap-2">
+                <span>{STATION_FLAGS[instId]?.flag || `FLAG-${instId.toUpperCase()}-2026`}</span>
+                <span className="text-[10px] text-gray-400 bg-gray-900 px-2 py-0.5 rounded border border-gray-800">
+                  Dispense to visiting citizens upon in-person clearance or paid intel
+                </span>
+              </div>
+            </div>
+          </div>
+          <button
+            onClick={() => {
+              const flag = STATION_FLAGS[instId]?.flag || `FLAG-${instId.toUpperCase()}-2026`;
+              navigator.clipboard?.writeText(flag);
+              setCopiedFlag(true);
+              setTimeout(() => setCopiedFlag(false), 2000);
+            }}
+            className="bg-gray-900 hover:bg-gray-800 border border-gray-700 text-xs px-3 py-1.5 rounded flex items-center gap-1.5 font-bold transition-all text-gray-200"
+          >
+            {copiedFlag ? <Check className="w-3.5 h-3.5 text-vc-emerald" /> : <Copy className="w-3.5 h-3.5" />}
+            <span>{copiedFlag ? 'Copied Flag!' : 'Copy Flag Code'}</span>
+          </button>
+        </div>
+
+        {/* Volunteer Station Missions / Operator Directives */}
+        {volunteerMissions.length > 0 && (
+          <div className="bg-vc-card border border-cyan-500/30 rounded-xl p-5 shadow space-y-4">
+            <div className="flex items-center justify-between border-b border-gray-800 pb-3">
+              <div className="flex items-center gap-2">
+                <Sparkles className="w-5 h-5 text-cyan-400" />
+                <div>
+                  <h3 className="text-sm font-syne font-bold text-white uppercase tracking-wider">
+                    Volunteer Station Directives & Quests
+                  </h3>
+                  <p className="text-[11px] text-gray-400">
+                    Role-tailored station duties, operational audits, and treasure hunt coordination.
+                  </p>
+                </div>
+              </div>
+              <span className="bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 text-[10px] font-bold px-2 py-0.5 rounded tracking-widest uppercase">
+                {volunteerMissions.filter((m) => m.instance?.status === 'completed').length} / {volunteerMissions.length} Complete
+              </span>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+              {volunteerMissions.map((m) => {
+                const isDone = m.instance?.status === 'completed';
+                return (
+                  <div
+                    key={m.id}
+                    className={`p-3 rounded-lg border flex flex-col justify-between space-y-2.5 ${
+                      isDone
+                        ? 'bg-vc-emerald/5 border-vc-emerald/30'
+                        : 'bg-gray-900/70 border-gray-800 hover:border-gray-700'
+                    }`}
+                  >
+                    <div className="space-y-1">
+                      <div className="flex items-center justify-between text-[10px]">
+                        <span className="text-vc-gold font-bold uppercase">Wave 0{m.wave}</span>
+                        <span className="text-vc-emerald font-bold font-syne">+{m.reward_vb} VB</span>
+                      </div>
+                      <h4 className="text-xs font-bold text-white line-clamp-1">{m.title}</h4>
+                      <p className="text-[11px] text-gray-400 leading-snug">{m.objective}</p>
+                    </div>
+
+                    <div className="pt-2 border-t border-gray-800 flex items-center justify-between">
+                      <span className="text-[9px] uppercase text-gray-500 font-mono">
+                        {m.verification_method.replace('_', ' ')}
+                      </span>
+                      {isDone ? (
+                        <span className="text-[10px] text-vc-emerald font-bold flex items-center gap-1">
+                          <CheckCircle2 className="w-3 h-3" /> Completed
+                        </span>
+                      ) : (
+                        <button
+                          onClick={() => handleVerifyVolunteerMission(m)}
+                          disabled={missionVerifyingId === m.id}
+                          className="bg-cyan-600 hover:bg-cyan-500 disabled:opacity-50 text-black font-syne font-bold text-[10px] px-2.5 py-1 rounded transition-all"
+                        >
+                          {missionVerifyingId === m.id ? 'Verifying...' : 'Verify & Claim'}
+                        </button>
+                      )}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        )}
 
         {/* Bank Active Loans Section (if Bank) */}
         {instId === 'bank' && (

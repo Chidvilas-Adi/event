@@ -17,9 +17,8 @@ export async function POST(req: NextRequest) {
     eventBus.broadcast('world_state_updated', { reset: true, tick: 1, wave: 1 });
 
     return NextResponse.json({
-      success: true,
-      message: 'Venture City world successfully reset to pristine canonical starting state (12 Master Catalogue companies, 30,000 VB vault, 100 units/resource, reset pools, Tick 1, Wave 1).',
       ...result,
+      message: 'Venture City world successfully reset to pristine canonical starting state (12 Master Catalogue companies, 30,000 VB vault, 100 units/resource, reset pools, Tick 1, Wave 1).',
     });
   } catch (err: any) {
     console.error('World Reset Error:', err);

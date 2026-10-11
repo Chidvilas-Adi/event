@@ -172,6 +172,7 @@ describe('Phase 4 - World Control, Crises, Disputes, Lifecycle & Simulation Dril
     const counts = await pool.query(`
       SELECT participant_id, COUNT(*) as m_count
       FROM mission_instances
+      WHERE participant_id LIKE 'vc_p_%'
       GROUP BY participant_id
       LIMIT 10
     `);

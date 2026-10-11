@@ -42,8 +42,8 @@ describe('Seed Data Integrity and Reconciliation', () => {
     const p100Bal = await LedgerService.getBalance('participant', 'vc_p_100');
     expect(p100Bal).toBe(500);
 
-    // 6. Verify Resource ledger initialized (100 units of each of 6 resources per company = 6,000 units)
+    // 6. Verify Resource ledger initialized (100 units of each of 6 resources per company = 7,200 units for 12 companies)
     const resLedgerRes = await pool.query('SELECT SUM(quantity) as total FROM resource_ledger');
-    expect(parseInt(resLedgerRes.rows[0].total, 10)).toBe(6000);
+    expect(parseInt(resLedgerRes.rows[0].total, 10)).toBe(7200);
   });
 });
